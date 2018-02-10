@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>git学习笔记</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(197, 200, 198); background-color: rgb(29, 31, 33); overflow: auto; }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(155, 160, 157); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: white; }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(155, 160, 157); border-color: rgb(67, 72, 76); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(67, 72, 76); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(67, 72, 76); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(48, 51, 55); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(39, 41, 44); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(67, 72, 76) rgb(67, 72, 76) rgb(53, 57, 60); border-image: initial; background-color: rgb(48, 51, 55); }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); overflow: scroll; }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { background-color: rgb(255, 255, 255); border-top: 1px solid rgb(204, 204, 204); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; background-color: rgba(0, 0, 0, 0.0392157); border-radius: 3px; }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; background: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border-radius: 3px; }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; background-color: rgb(252, 252, 252); border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-image: initial; border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
+.markdown-preview .task-list-item-checkbox { position: absolute; margin: 0.25em 0px 0px -1.4em; }
+.markdown-preview code { text-shadow: none; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+.line-number.bracket-matcher {
+  background-color: #777;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+pre.editor-colors {
+  background-color: #1d1f21;
+  color: #c5c8c6;
+}
+pre.editor-colors .invisible-character {
+  color: rgba(197, 200, 198, 0.2);
+}
+pre.editor-colors .indent-guide {
+  color: rgba(197, 200, 198, 0.2);
+}
+pre.editor-colors .wrap-guide {
+  background-color: rgba(197, 200, 198, 0.1);
+}
+pre.editor-colors .gutter {
+  background-color: #292c2f;
+}
+pre.editor-colors .gutter .cursor-line {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+pre.editor-colors .line-number.cursor-line-no-selection {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #fba0e3;
+}
+pre.editor-colors .invisible {
+  color: #c5c8c6;
+}
+pre.editor-colors .cursor {
+  border-color: white;
+}
+pre.editor-colors .selection .region {
+  background-color: #444;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-bottom: 1px solid #f8de7e;
+  margin-top: -1px;
+  opacity: .7;
+}
+pre.editor-colors .syntax--source.syntax--gfm {
+  color: #999;
+}
+pre.editor-colors .syntax--gfm .syntax--markup.syntax--heading {
+  color: #eee;
+}
+pre.editor-colors .syntax--gfm .syntax--link {
+  color: #555;
+}
+pre.editor-colors .syntax--gfm .syntax--variable.syntax--list,
+pre.editor-colors .syntax--gfm .syntax--support.syntax--quote {
+  color: #555;
+}
+pre.editor-colors .syntax--gfm .syntax--link .syntax--entity {
+  color: #ddd;
+}
+pre.editor-colors .syntax--gfm .syntax--raw {
+  color: #aaa;
+}
+pre.editor-colors .syntax--markdown .syntax--paragraph {
+  color: #999;
+}
+pre.editor-colors .syntax--markdown .syntax--heading {
+  color: #eee;
+}
+pre.editor-colors .syntax--markdown .syntax--raw {
+  color: #aaa;
+}
+pre.editor-colors .syntax--markdown .syntax--link {
+  color: #555;
+}
+pre.editor-colors .syntax--markdown .syntax--link .syntax--string {
+  color: #555;
+}
+pre.editor-colors .syntax--markdown .syntax--link .syntax--string.syntax--title {
+  color: #ddd;
+}
+.syntax--comment {
+  color: #7C7C7C;
+}
+.syntax--entity {
+  color: #FFD2A7;
+}
+.syntax--entity.syntax--name.syntax--type {
+  text-decoration: underline;
+  color: #FFFFB6;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #9B5C2E;
+}
+.syntax--keyword {
+  color: #96CBFE;
+}
+.syntax--keyword.syntax--control {
+  color: #96CBFE;
+}
+.syntax--keyword.syntax--operator {
+  color: #EDEDED;
+}
+.syntax--storage {
+  color: #CFCB90;
+}
+.syntax--storage.syntax--modifier {
+  color: #96CBFE;
+}
+.syntax--constant {
+  color: #99CC99;
+}
+.syntax--constant.syntax--numeric {
+  color: #FF73FD;
+}
+.syntax--variable {
+  color: #C6C5FE;
+}
+.syntax--invalid.syntax--deprecated {
+  text-decoration: underline;
+  color: #FD5FF1;
+}
+.syntax--invalid.syntax--illegal {
+  color: #FD5FF1;
+  background-color: rgba(86, 45, 86, 0.75);
+}
+.syntax--string .syntax--source,
+.syntax--string .syntax--meta.syntax--embedded.syntax--line {
+  color: #EDEDED;
+}
+.syntax--string .syntax--punctuation.syntax--section.syntax--embedded {
+  color: #00A0A0;
+}
+.syntax--string .syntax--punctuation.syntax--section.syntax--embedded .syntax--source {
+  color: #00A0A0;
+}
+.syntax--string {
+  color: #A8FF60;
+}
+.syntax--string .syntax--constant {
+  color: #00A0A0;
+}
+.syntax--string.syntax--regexp {
+  color: #E9C062;
+}
+.syntax--string.syntax--regexp .syntax--constant.syntax--character.syntax--escape,
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded,
+.syntax--string.syntax--regexp .syntax--string.syntax--regexp.syntax--arbitrary-repetition {
+  color: #FF8000;
+}
+.syntax--string.syntax--regexp.syntax--group {
+  color: #C6A24F;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+.syntax--string.syntax--regexp.syntax--character-class {
+  color: #B18A3D;
+}
+.syntax--string .syntax--variable {
+  color: #8A9A95;
+}
+.syntax--support {
+  color: #FFFFB6;
+}
+.syntax--support.syntax--function {
+  color: #DAD085;
+}
+.syntax--support.syntax--constant {
+  color: #FFD2A7;
+}
+.syntax--support.syntax--type.syntax--property-name.syntax--css {
+  color: #EDEDED;
+}
+.syntax--source .syntax--entity.syntax--name.syntax--tag,
+.syntax--source .syntax--punctuation.syntax--tag {
+  color: #96CBFE;
+}
+.syntax--source .syntax--entity.syntax--other.syntax--attribute-name {
+  color: #C6C5FE;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #C6C5FE;
+}
+.syntax--entity.syntax--name.syntax--tag.syntax--namespace,
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--namespace {
+  color: #E18964;
+}
+.syntax--meta.syntax--preprocessor.syntax--c {
+  color: #8996A8;
+}
+.syntax--meta.syntax--preprocessor.syntax--c .syntax--keyword {
+  color: #AFC4DB;
+}
+.syntax--meta.syntax--cast {
+  color: #676767;
+}
+.syntax--meta.syntax--sgml.syntax--html .syntax--meta.syntax--doctype,
+.syntax--meta.syntax--sgml.syntax--html .syntax--meta.syntax--doctype .syntax--entity,
+.syntax--meta.syntax--sgml.syntax--html .syntax--meta.syntax--doctype .syntax--string,
+.syntax--meta.syntax--xml-processing,
+.syntax--meta.syntax--xml-processing .syntax--entity,
+.syntax--meta.syntax--xml-processing .syntax--string {
+  color: #494949;
+}
+.syntax--meta.syntax--tag .syntax--entity,
+.syntax--meta.syntax--tag > .syntax--punctuation,
+.syntax--meta.syntax--tag.syntax--inline .syntax--entity {
+  color: #C6C5FE;
+}
+.syntax--meta.syntax--tag .syntax--name,
+.syntax--meta.syntax--tag.syntax--inline .syntax--name,
+.syntax--meta.syntax--tag > .syntax--punctuation {
+  color: #96CBFE;
+}
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--name.syntax--tag {
+  text-decoration: underline;
+  color: #96CBFE;
+}
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--tag.syntax--pseudo-class {
+  color: #8F9D6A;
+}
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #8B98AB;
+}
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--class {
+  color: #62B1FE;
+}
+.syntax--meta.syntax--property-group .syntax--support.syntax--constant.syntax--property-value.syntax--css,
+.syntax--meta.syntax--property-value .syntax--support.syntax--constant.syntax--property-value.syntax--css {
+  color: #F9EE98;
+}
+.syntax--meta.syntax--preprocessor.syntax--at-rule .syntax--keyword.syntax--control.syntax--at-rule {
+  color: #8693A5;
+}
+.syntax--meta.syntax--property-value .syntax--support.syntax--constant.syntax--named-color.syntax--css,
+.syntax--meta.syntax--property-value .syntax--constant {
+  color: #87C38A;
+}
+.syntax--meta.syntax--constructor.syntax--argument.syntax--css {
+  color: #8F9D6A;
+}
+.syntax--meta.syntax--diff,
+.syntax--meta.syntax--diff.syntax--header {
+  color: #F8F8F8;
+  background-color: #0E2231;
+}
+.syntax--meta.syntax--separator {
+  color: #60A633;
+  background-color: #242424;
+}
+.syntax--meta.syntax--line.syntax--entry.syntax--logfile,
+.syntax--meta.syntax--line.syntax--exit.syntax--logfile {
+  background-color: rgba(238, 238, 238, 0.16);
+}
+.syntax--meta.syntax--line.syntax--error.syntax--logfile {
+  background-color: #751012;
+}
+</style>
+  </head>
+  <body class='markdown-preview' data-use-github-style><h1 id="udacity-git-">Udacity Git学习笔记</h1>
+<h1 id="-git-https-git-scm-com-book-zh-v2-"><a href="https://git-scm.com/book/zh/v2"><strong>git在线帮助文档</strong></a></h1>
+<h1 id="-git-"><strong>git基本概念</strong></h1>
+<h2 id="commit-">commit命令</h2>
+<blockquote>
+<p>用户创建的检查点成为提交，每个提交代表了一个时间点的内容版本。commit命令是git中的一种组件。</p>
+<p>git需要用户在每次创建提交时提供提交消息</p>
+<p>git可以离线操作</p>
+</blockquote>
+<p>commit命令实际上就是仓库中每个文件的<strong>快照</strong>。</p>
+<h2 id="-log-git-git-"><strong>日志(log)</strong> ——在使用git记录代码编写过程的前提下，使用git浏览历史</h2>
+<blockquote>
+<p>log 日志显示了提交列表，可以说<code>提交commit</code>是<code>日志log</code>的一部分。</p>
+</blockquote>
+<ul>
+<li><p>导航到代码的保存目录并输入git log</p>
+<blockquote>
+<p>结果将显示所有的commit内容，从最近的开始往下排列</p>
+<p>每个commit都有一个ID（类似于序列号，可以唯一的标识每个commit并使你能够引用它）、作者、日期和与之相关的注释信息（解释了自上次commit出现了哪些更改）</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="-git-diff-commit-">使用git diff命令——查看某个commit带来了那些更改</h3>
+<ul>
+<li>输入git diff 不按回车<ul>
+<li>后面：<ul>
+<li>首先复制下第一个commit ID（旧的）</li>
+<li>然后复制第二个（新的）</li>
+<li>并将它们都粘贴到命令行中</li>
+<li><strong>注意：如果输入提交 ID 的前四个或更多个字符更为轻松，则你可以这样做，而不必粘贴整个 ID。</strong></li>
+</ul>
+</li>
+<li>回车</li>
+<li>---旧的文件名 + 修改日期</li>
+<li>+++新的文件名 + 修改日期</li>
+<li>@@-旧的起始行数，旧的终止行数 +新的起始行数，新的终止行数@@</li>
+<li>下方的表示：<ul>
+<li>黑色行代表没有更改</li>
+<li>带有减号的红色行表示被删除了</li>
+<li>带有加号的绿色行表示被增加的，即存在在第二个版本中的</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>git diff与FC或diff程序相似，但它不是对比两个文件，而是对比git中某个文件的不同版本</p>
+</blockquote>
+<h3 id="-">对于提交频率</h3>
+<ul>
+<li><p>由于可以选择何时进行提交，因此，你可能想知道该多久提交一次更改。保持较小的提交通常是一个好做法。随着两个版本之间的差异越来越大，易于理解性和实用性都会越来越低。但是，你也不希望使提交过小。如果总是在每次更改一行代码后保存提交，则历史记录会因短时间内包含大量提交而变得难以读懂。</p>
+</li>
+<li><p><strong>为每项逻辑更改进行一次提交</strong>是很好的经验法则。例如，如果改正了一处打字错误，然后在文件的另一部分中改正了一个错误，则应为每项更改进行一次提交，因为这两项更改在逻辑上是独立的。如果这样做，每次提交都将具有一个易于理解的目的。Git 允许你在每次提交时都编写一条简短的信息来说明更改了什么。如果每次提交都包含一项逻辑更改，这条信息会更有用。</p>
+</li>
+<li><p>选择何时提交是一种主观判断，而且不一定一成不变。在选择是否提交时，只需记住：每个提交都应具有一个清晰的逻辑目的，而且绝不应在不进行提交的情况下完成过多工作。</p>
+</li>
+</ul>
+<h2 id="-repository-git-"><strong>仓库(repository)</strong>——多文件git提交（追踪多个文件）</h2>
+<blockquote>
+<p><strong>git仓库是文件的集合，是Git跟踪的聚合单元。</strong><br>计算机上可以有多个不同的git仓库，仓库之间可以进行交互，commit提交可以在其对应的仓库内部进行交互。</p>
+<p>使用多种语言进行编写代码,常见的方法是使用跨越多个文件的功能。<br>举个例子，当其中一个文件对另一个文件编写的函数进行调用时，如果要改变参数，则需要对两个文件中的相关内容同时改变。<br>所以追踪多个文件在html、css文件或者小说章节（比如修改主人公的姓名）中等等都是非常重要的。</p>
+</blockquote>
+<p>在从事某个项目时，通常会有多个需要同时跟踪的文件，git将这些文件的集合称为“仓库”。<br>当你在git中保存文件的一个版本（commit），都将保存仓库中每个文件的版本。<br>如果你的仓库中只有一个文件，也是成立的。</p>
+<p>另一方面，你可以在单次提交时，更改所有文件。</p>
+<ul>
+<li><p>git log --stat<br>  该选项会给出每次提交，所更改的文件的统计数据。<br>  类似于git log，但每个提交也会显示该提交所影响的文件（即该次提交修改的文件）。<br>  <strong>绿色的加号表示新增，红色的减号表示删除。加号和减号的数量与更改的大小是成正比的。</strong></p>
+</li>
+<li><p>按Q停止查看git log输出</p>
+</li>
+<li>输入git diff以及相比对的两次提交的ID，可以分别看到多个文件的修改状况。</li>
+</ul>
+<h2 id="git-clone-">git clone命令</h2>
+<blockquote>
+<p>用git下载的不只是实际的文件（也就是最近commit的文件），而是要下载整个历史记录文件。<br>也就是要将整个仓库从一台计算机搬到另一台计算机。<br>git clone可以创建仓库的克隆。</p>
+</blockquote>
+<ul>
+<li>要克隆版本库，请运行 git clone（后跟空格和版本库 URL）。(需要联网操作)</li>
+</ul>
+<h3 id="-"><strong>获得彩色输出</strong></h3>
+<p>要获得彩色的 diff 输出，请运行 git config --global color.ui auto</p>
+<blockquote>
+<p>git config命令只是更改git中的设置<br>--global选项表示将应用到所有的git项目</p>
+</blockquote>
+<h2 id="git-">git 错误和警告解决方法</h2>
+<ul>
+<li>Should not be doing an octopus（不应执行 octopus）<blockquote>
+<p>Octopus 是 Git 用来合并多个不同代码版本的一种策略。如果在不合适的情况下尝试使用该策略，则可能会出现此消息。</p>
+</blockquote>
+</li>
+<li>You are in 'detached HEAD' state（你处于“分离的 HEAD”状态）<blockquote>
+<p>Git 将你目前所在的提交称为 HEAD。可通过切换到前一个提交来“分离”HEAD，这在下一个视频中有说明。虽然此警告听起来不太好，但分离 HEAD 实际上不是坏事。Git 只是向你发出警告，以便你知道自己正在这样做。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="-git-checkout-"><strong>检出(git checkout)</strong>——检出代码的旧版本 恢复之前版本</h2>
+<p>在Git中，checkout 一个 commit 是指将所有文件重置到 进行commit时文件的状态。</p>
+<h2 id="-git-command-review-"><strong>复习Git command review</strong></h2>
+<ul>
+<li><p>Compare two commits, printing each line that is present in one commit but not the other.</p>
+<blockquote>
+<p><code>git diff</code> will do this. It takes two arguments - the two commit ids to compare.</p>
+</blockquote>
+</li>
+<li><p>Make a copy of an entire Git repository, including the history, onto your own computer.</p>
+<blockquote>
+<p><code>git clone</code> will do this. It takes one argument - the url of the repository to copy.</p>
+</blockquote>
+</li>
+<li><p>Temporarily reset all files in a directory to their state at the time of a specific commit.</p>
+<blockquote>
+<p><code>git checkout</code> will do this. It takes one argument - the commit ID to restore.</p>
+</blockquote>
+</li>
+<li><p>Show the commits made in this repository, starting with the most recent.</p>
+<blockquote>
+<p><code>git log</code> will do this. It doesn't take any arguments.</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="-git-"><strong>git实战</strong></h1>
+<h2 id="-git-">.git文件夹</h2>
+<p>在项目的根目录下，有一个隐藏的文件夹.git，用来保存所有历史纪录。</p>
+<ul>
+<li>在输入ls可以看见所有文件</li>
+<li>在输入ls -a时还可以看见隐藏的文件</li>
+</ul>
+<h2 id="-git-init-"><strong>git init</strong>——创建仓库</h2>
+<ul>
+<li>在项目所在的目录中打开git bash</li>
+<li>运行git init即初始化或创建新的git仓库，也就新建了.git文件夹</li>
+<li><strong>注意：新建的Git中运行<code>git log</code>会发现，其中并没有commit，也就是说，新建的仓库中不含任何东西。我们必须自行commit提交</strong><ul>
+<li>这里有两个原因：<ul>
+<li>我们可能不想提交目录中的所有内容</li>
+<li>git如果自动提交的话，我们将不能写入自己的提交信息注释</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>Git 的版本库和目录</strong></p>
+<ul>
+<li><strong>每个 Git 版本库均关联到一个特定目录，即你在其中运行了 git init 的目录。版本库仅包含该目录及其子目录中的文件，而且不同的版本库可以位于不同的目录中。</strong></li>
+<li><strong>注意：你经常会看到，某个目录中的 Git 版本库仅包含或仅跟踪该目录中的某些，而不是所有文件。本课后面将介绍其工作原理。</strong></li>
+</ul>
+</blockquote>
+<h2 id="-git-status-"><strong>git status</strong>——常用命令</h2>
+<p>通过该命令，我们可以看到最后提交后更改的文件，即显示出哪些内容未被跟踪，尚未commit。此外，该命令也会显示出最近的一次commit（若没有则为<code>Initial commit</code>）</p>
+<h2 id="-git-"><strong>git提交</strong></h2>
+<blockquote>
+<ul>
+<li>请切记，进行小提交，且在每次逻辑更改之后 进行一次提交是不错的想法。</li>
+<li>git允许你明确指定要提交的更改。<ul>
+<li>git会使用一个称为存储区域的临时区域，每次可以将一个文件添加到存储区域中。</li>
+<li>在准备提交时，git会将存储区域中的所有内容绑定起来一起提交，然后添加到仓库中。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>git add + 文件</strong>——将文件添加到暂存区</li>
+<li><strong>git reset + 文件</strong>——如果你意外地将某个文件添加到暂存区中，可以使用 git reset 删除它。此命令会从暂存区中删除该文件，但它仍在你的工作目录中</li>
+<li>再次运行<strong>git status</strong>可以看到显示出一些待提交更改的新文件<code>new files</code></li>
+<li>修改完成后使用<strong>git commit</strong>，完成一次版本提交<blockquote>
+<p><strong>如何编写提交信息</strong></p>
+<ul>
+<li>你将向你的反思版本库进行第一次提交。在你这样做时，需要编写提交信息，以说明所做的更改。在第 1 课快要结束时提供了适用于你的平台的“设置工作空间”视频，如果你遵循此视频中的说明，<strong>则在运行 git commit 时，所选的编辑器将会出现，让你可以编写提交信息</strong>。如果收到错误消息，则应尝试重温第 1 课中的说明，并确保正确设置了文本编辑器。</li>
+<li>你也可以通过命令行指定提交信息，即运行 <strong>git commit -m "Commit message"</strong>，而不是 git commit。设置编辑器仍然是一种好的做法，因为这可让你更轻松地编写较长的提交信息，以全面说明所做的更改。</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h2 id="-git-diff-"><strong>git diff</strong>新用法——对比暂存区与最新版本</h2>
+<ul>
+<li><p><strong>单独使用git diff而不加参数</strong>时，可以对比暂存区与工作区，显示出更多的改变信息。<br><strong>常常与git status搭配使用</strong>，从而得到工作区中untracked的文件和unsave的文件信息。</p>
+</li>
+<li><p><strong>git diff --staged</strong> 可以对比暂存区和最新版本，可以方便检查即将commit的版本和已存在最新版本之间的差别。</p>
+</li>
+<li><p><strong>git reset --hard</strong>可以放弃当前工作区和暂存区的所有工作，相当于直接返回至最新版本。</p>
+<ul>
+<li><strong>！！！千万小心！！！<br>该步一旦执行无法恢复</strong></li>
+</ul>
+</li>
+<li><p><strong>注意区分工作区、暂存区、版本仓库三者关系</strong></p>
+<ul>
+<li><strong>工作区working directory</strong>：文件现在所处的状态</li>
+<li><strong>暂存区staging area</strong>：已经<code>git add</code>的文件，即将commit的文件</li>
+<li><strong>版本仓库repository&amp;commit</strong>：<code>git log</code>可以查询到ID的文件</li>
+</ul>
+</li>
+<li><strong>三者修改的新鲜程度：工作区&gt;暂存区&gt;版本仓库</strong></li>
+</ul>
+<h2 id="-id-">提交<strong>ID</strong>的产生</h2>
+<p>提交ID与内部的修改、创建提交的作者、时间都有关，因而<strong>即使做了相同修改，提交ID也并不一样。</strong></p>
+<h2 id="-branch-"><strong>分支(branch)</strong></h2>
+<ul>
+<li><p><strong>常用分支命名</strong>：</p>
+<ul>
+<li><strong>master分支</strong>：大多数git仓库中主要分支的名称，创建git仓库时自动创建master分支。它是你的产品质量分支，绝对不会崩溃，始终保持运转</li>
+<li><strong>development分支</strong>：用来包含正在进行工作的项目内容</li>
+<li><strong>实验性分支</strong>：完全料到它们很大可能或者一定会崩溃，是你用来研究的内容，也是希望能和同事和朋友分享的内容<ul>
+<li><strong>exp分支</strong>：实验性分支，用来扩展新功能前的beta版本</li>
+<li><strong>feature分支</strong>：类似于exp分支，用来实现特定功能</li>
+<li>与朋友协作时，也可以用branch分割出每个人的工作</li>
+</ul>
+</li>
+<li><strong>bug-fix分支</strong>：可以用分支来进行bug的修改，最后合并，从而能够分割出这部分工作</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong><em>注意：当checkout一些旧的commit时，git会提示detached head消息，即警告你 你所研究的这个commit没有用分支名称进行标记，即处于游离状态或位于master分支上。</em></strong></p>
+</blockquote>
+<ul>
+<li><strong>可以使用checkout检出分支</strong>，只是使用的是人类能看懂的分支名称而非ID号码<ul>
+<li>当checkout到一个分支时，然后进行commit时，分支标记会自动更新到该commit上，也即在该分支上的commit</li>
+<li>该分支会一直保持检出状态，也即会一直停留在该分支上，而不会自动跳至master分支</li>
+</ul>
+</li>
+<li><strong>顶点(tip)</strong>：分支中的当前最后一个commit被称为该分支的顶点</li>
+<li>单个commit上可能会出现多个分支标记，但是更新 新的commit时只会更新当前已检出的分支，其他分支不受影响</li>
+</ul>
+<h3 id="-git-branch-"><strong>git branch命令</strong></h3>
+<ul>
+<li><code>git branch</code>可以显示出已存在的分支，旁边的星号表示当前检出的分支</li>
+<li><code>git branch new-branch-name</code>可以创建新的branch，命名为new-branch-name</li>
+<li><p><code>git checkout new-branch-name</code>可检出new-branch-name分支并进行更改</p>
+</li>
+<li><p>分支类似于上下文切换，可以保存从前的一切工作，在增加新功能等场合下使用可以让工作更有条理性。</p>
+</li>
+</ul>
+<h3 id="-git-log-"><strong>git log命令</strong></h3>
+<ul>
+<li><code>git log --graph --oneline ... ... ...等</code>可以可视化分支组成<ul>
+<li><code>--graph</code>以图形形式显示分支与commit连接方式，即绘制<strong>历史记录图表</strong></li>
+<li><code>--oneline</code>单行显示commit信息，省去作者和时间信息</li>
+<li><code>...</code>表示查看的分支，可以有多个分支，省略不写则只查看当前已检出的分支<ul>
+<li><code>git log</code>以当前commit或任意指定分支的最新commit为起点，一直往前跟踪，直到到达initial commit（没有父commit的commit），即root。具体可参考<em>父commit</em></li>
+</ul>
+</li>
+<li>上面三个可以任意组合，也可以不写任何一个</li>
+</ul>
+</li>
+<li><p><code>git log --graph --decorate --oneline --simplify-by-decoration --all</code></p>
+<ul>
+<li>说明：<ul>
+<li>--decorate 标记会让git log显示每个commit的引用(如:分支、tag等)</li>
+<li>--oneline 一行显示</li>
+<li>--simplify-by-decoration 只显示被branch或tag引用的commit</li>
+<li>--all 表示显示所有的branch，这里也可以选择，比如我指向显示分支ABC的关系，则将--all替换为branchA branchB branchC</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="-commit-parent-"><strong>父commit(parent)</strong></h3>
+<ul>
+<li>commit的存储方式为单向链表，每个commit只会记录他的父commit，也即上一个commit。这样在运行<code>git log</code>时，只需从顶点中搜索到要查询的分支的顶点，然后向上遍历即可。</li>
+<li>由于仅保存父commit而不保存子commit，所以在checkout旧的commit时就可能会丢失后面的信息。</li>
+<li><strong>可达性</strong>：注意，由于只记录一个父commit，因而在使用log进行搜索时，并不会将所有commit全部列举(比如并列分支上的commit以及子commit)</li>
+</ul>
+<h2 id="-"><strong>合并分支</strong></h2>
+<p>git 可以将两个分支进行自动合并：</p>
+<ul>
+<li>相同的行会自动添加</li>
+<li><p>不同的行</p>
+<ul>
+<li>需要参考原始版本</li>
+<li>如果原始版本中有，但一个分支将其删除了，则最终没有</li>
+<li>如果原始版本无，但一个分支将其增加了，则最终有</li>
+<li>如果两个分支都对其中一处进行了修改，不管这两处修改是应该同时加入，还是应该加入其中一个，git都会检测出冲突并报错警告</li>
+</ul>
+</li>
+<li><p>在分支合并中，<strong>原始版本</strong>即分支交叉（<strong>fork</strong>）处的最近一个commit文件</p>
+</li>
+<li><strong>特别注意</strong>：<strong>合并后的commit会同时存储两个父commit的提交信息</strong>，即该链表同时指向两个旧的commit，<strong>因此在使用<code>git log</code>时会显示两个分支上的commit（按时间顺序进行排列）</strong></li>
+<li>新的commit会被附加到两个分支中的一个指定的分支上，这时我们即可以删除另一个分支。<strong>但要注意，删除分支只是删除了commit上的标签，但并未删除这些commit，事实上，我们仍可以通过git log访问到这些commit</strong>。更多可查看<em>垃圾收集过程</em></li>
+</ul>
+<h3 id="-">具体操作：</h3>
+<ul>
+<li>首先检出checkout希望被附加的分支，比如master分支</li>
+<li><code>git merge master coins</code>创建master分支和coins分支的合并版本。<strong>应当注意：由于是合并两个分支，因此在命令行中按何顺序键入分支并不重要。关键是要记住，<code>git merge</code> 始终将所有指定的分支合并到当前检出的分支中，并为该分支新建一个提交。</strong></li>
+<li>填写注释信息，注释中自动补充了合并分支的信息</li>
+<li><strong>可以用<code>git log --graph --oneline</code>来观察确定合并结果</strong></li>
+<li><strong>应当注意到</strong>：如果此时仅仅使用<code>git log</code>，则只会按时间顺序显示出commit。如果希望对比历史commit中相邻的修改，很难用<code>git diff</code>确定哪两个ID相邻。</li>
+<li>我们可以采用<strong>git show commit_ID</strong>的命令将commit与所在分支的commit进行对比</li>
+<li><h2 id="-"><strong>删除分支</strong></h2>
+<ul>
+<li>合并分支后，我们可以对分支进行删除：</li>
+<li><strong>git branch -d branch_name</strong>命令可以删除分支标签，但不会删除commit</li>
+<li>其中 <code>-d</code>表示删除</li>
+<li>注意到：合并后我们依然能够访问到被删除分支上的commit，但当我们未合并直接删除分支后，我们将很难在访问到那些commit，git会定期自动垃圾回收。那意味着我们将放弃所有commit。有关内容可参看<strong><em>垃圾收集过程</em></strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="-git-merge-"><strong>对git merge的更多说明</strong></h3>
+<ul>
+<li><p>git merge 还将在合并的版本中包含当前检出的分支。因此，如果检出了 branch1，并且运行 git merge branch2 branch3，则合并的版本会将 branch1 以及 branch2 和 branch3 组合起来。由于在你进行合并提交后 branch1 标签将会更新，因此，你不想将 branch1 中的更改包含在合并中是不可能的。有鉴于此，在合并之前应始终检出你打算合并的两个分支之一。应检出哪个分支取决于你想让哪个分支标签指向新的提交。</p>
+</li>
+<li><p>由于检出的分支始终包含在合并中，因此，你可能已猜到，在合并两个分支时，无需在命令行上将两者都指定为 git merge 的参数。如果想将 branch2 合并到 branch1 中，只需键入 git checkout branch1，然后键入 git merge branch2 即可。键入 git merge branch1 branch2 的唯一原因是，它能帮助你对要合并的分支更加心中有数。</p>
+</li>
+<li><p>另外，由于是合并两个分支，因此在命令行中按何顺序键入分支并不重要。关键是要记住，git merge 始终将所有指定的分支合并到当前检出的分支中，并为该分支新建一个提交。</p>
+</li>
+</ul>
+<h3 id="-"><strong>合并冲突</strong></h3>
+<p>如果收到类似以下所示的消息：</p>
+<pre class="editor-colors lang-"><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>Auto-merging&nbsp;game.js</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>CONFLICT&nbsp;(content):&nbsp;Merge&nbsp;conflict&nbsp;in&nbsp;game.js</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>Automatic&nbsp;merge&nbsp;failed;&nbsp;fix&nbsp;conflicts&nbsp;and&nbsp;then&nbsp;commit&nbsp;the&nbsp;result.</span></span></div></pre><p>这表示在你开始合并时，文件的状态不同于 Caroline 的文件状态。要修复此问题，请完成以下步骤：(更具体的说，是game.js文件中修改了同一个部分，比如同一行，导致git报错合并冲突)</p>
+<ul>
+<li>文中的一种方法：<ul>
+<li>运行 git merge --abort，将文件恢复到你开始合并之前的状态<br>仔细检查文件的状态。如果在检出 master 分支时运行 git log，则应看到 Caroline 的“Add color”提交是第二新的提交，而最新的提交应为你修复 bullet 错误的提交。如果使用 git diff 将你的提交与 Caroline 的提交进行对比，你的提交应在第 424 行引入 this.delayBeforeBullet = 10; 这行代码。应仅使用空格（无制表符）使该行的缩进程度与其下面一行相同，而且该行之后应无空格。</li>
+<li>在文件处于正确的状态后，利用你所做的更改新建一个提交。</li>
+<li>重新尝试合并。</li>
+</ul>
+</li>
+<li>更常用的方法：<ul>
+<li>在git中打开game.js文件<code>subl game.js</code></li>
+<li>搜索一堆<code>&lt;&lt;&lt;&lt;&lt;</code>（小于号）可以快速找到冲突位置</li>
+</ul>
+</li>
+</ul>
+<pre class="editor-colors lang-js"><div class="line"><span class="syntax--source syntax--js"><span class="syntax--meta syntax--function syntax--js"><span class="syntax--entity syntax--name syntax--function syntax--js"><span>Asteroid</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--storage syntax--type syntax--function syntax--js"><span>function</span></span><span class="syntax--meta syntax--parameters syntax--js"><span class="syntax--punctuation syntax--definition syntax--parameters syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--parameters syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span>&nbsp;</span><span class="syntax--punctuation syntax--definition syntax--function syntax--body syntax--begin syntax--bracket syntax--curly syntax--js"><span>{</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;</span><span class="syntax--variable syntax--language syntax--js"><span>this</span></span><span class="syntax--meta syntax--function syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--entity syntax--name syntax--function syntax--js"><span>breakIntoFragments</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--storage syntax--type syntax--function syntax--js"><span>function</span></span><span>&nbsp;</span><span class="syntax--meta syntax--parameters syntax--js"><span class="syntax--punctuation syntax--definition syntax--parameters syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--parameters syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span>&nbsp;</span><span class="syntax--punctuation syntax--definition syntax--function syntax--body syntax--begin syntax--bracket syntax--curly syntax--js"><span>{</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--control syntax--js"><span>for</span></span><span>&nbsp;</span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>(</span></span><span class="syntax--storage syntax--type syntax--var syntax--js"><span>var</span></span><span>&nbsp;i&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>0</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span><span>&nbsp;i&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&lt;</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>3</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span><span>&nbsp;i</span><span class="syntax--keyword syntax--operator syntax--increment syntax--js"><span>++</span></span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>)</span></span><span>&nbsp;</span><span class="syntax--meta syntax--brace syntax--curly syntax--js"><span>{</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--storage syntax--type syntax--var syntax--js"><span>var</span></span><span>&nbsp;roid&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>$</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--entity syntax--name syntax--function syntax--js"><span>extend</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--constant syntax--language syntax--boolean syntax--true syntax--js"><span>true</span></span><span class="syntax--meta syntax--delimiter syntax--object syntax--comma syntax--js"><span>,</span></span><span>&nbsp;</span><span class="syntax--punctuation syntax--section syntax--scope syntax--begin syntax--js"><span>{</span></span><span class="syntax--punctuation syntax--section syntax--scope syntax--end syntax--js"><span>}</span></span><span class="syntax--meta syntax--delimiter syntax--object syntax--comma syntax--js"><span>,</span></span><span>&nbsp;</span><span class="syntax--variable syntax--language syntax--js"><span>this</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>roid</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--object syntax--property syntax--js"><span>vel</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--variable syntax--property syntax--dom syntax--js"><span>x</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--support syntax--class syntax--math syntax--js"><span>Math</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--math syntax--js"><span>random</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>*</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>6</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>-</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>3</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>roid</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--object syntax--property syntax--js"><span>vel</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--variable syntax--property syntax--dom syntax--js"><span>y</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--support syntax--class syntax--math syntax--js"><span>Math</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--math syntax--js"><span>random</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>*</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>6</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>-</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>3</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--control syntax--js"><span>if</span></span><span>&nbsp;</span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>(</span></span><span class="syntax--support syntax--class syntax--math syntax--js"><span>Math</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--math syntax--js"><span>random</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&gt;</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>0</span><span class="syntax--meta syntax--delimiter syntax--decimal syntax--period syntax--js"><span>.</span></span><span>5</span></span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>)</span></span><span>&nbsp;</span><span class="syntax--meta syntax--brace syntax--curly syntax--js"><span>{</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>roid</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--object syntax--property syntax--js"><span>points</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--js"><span>reverse</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--brace syntax--curly syntax--js"><span>}</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>roid</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--object syntax--property syntax--js"><span>vel</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--property syntax--js"><span>rot</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--support syntax--class syntax--math syntax--js"><span>Math</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--math syntax--js"><span>random</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>*</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>2</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>-</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>1</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>roid</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--dom syntax--js"><span>move</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>roid</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--property syntax--js"><span>scale</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>*</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>3</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span><span>&nbsp;</span><span class="syntax--comment syntax--line syntax--double-slash syntax--js"><span class="syntax--punctuation syntax--definition syntax--comment syntax--js"><span>//</span></span><span>&nbsp;give&nbsp;them&nbsp;a&nbsp;little&nbsp;push</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>Game</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--object syntax--property syntax--js"><span>sprites</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--js"><span>push</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span>roid</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--brace syntax--curly syntax--js"><span>}</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;</span><span class="syntax--punctuation syntax--definition syntax--function syntax--body syntax--end syntax--bracket syntax--curly syntax--js"><span>}</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;</span><span class="syntax--variable syntax--language syntax--js"><span>this</span></span><span class="syntax--meta syntax--function syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--entity syntax--name syntax--function syntax--js"><span>collision</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--storage syntax--type syntax--function syntax--js"><span>function</span></span><span>&nbsp;</span><span class="syntax--meta syntax--parameters syntax--js"><span class="syntax--punctuation syntax--definition syntax--parameters syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--variable syntax--parameter syntax--function syntax--js"><span>other</span></span><span class="syntax--punctuation syntax--definition syntax--parameters syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span>&nbsp;</span><span class="syntax--punctuation syntax--definition syntax--function syntax--body syntax--begin syntax--bracket syntax--curly syntax--js"><span>{</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--constant syntax--other syntax--object syntax--js"><span>SFX</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--entity syntax--name syntax--function syntax--js"><span>explosion</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--control syntax--js"><span>if</span></span><span>&nbsp;</span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>(</span></span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>other</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--variable syntax--property syntax--dom syntax--js"><span>name</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>==</span></span><span>&nbsp;</span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>bullet</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>)</span></span><span>&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>Game</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--property syntax--js"><span>score</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--compound syntax--js"><span>+=</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>120</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>/</span></span><span>&nbsp;</span><span class="syntax--variable syntax--language syntax--js"><span>this</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--property syntax--js"><span>scale</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--variable syntax--language syntax--js"><span>this</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--property syntax--js"><span>scale</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--compound syntax--js"><span>/=</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>3</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--control syntax--js"><span>if</span></span><span>&nbsp;</span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>(</span></span><span class="syntax--variable syntax--language syntax--js"><span>this</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--property syntax--js"><span>scale</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&gt;</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>0</span><span class="syntax--meta syntax--delimiter syntax--decimal syntax--period syntax--js"><span>.</span></span><span>5</span></span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>)</span></span><span>&nbsp;</span><span class="syntax--meta syntax--brace syntax--curly syntax--js"><span>{</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span class="syntax--keyword syntax--operator syntax--bitwise syntax--shift syntax--js"><span>&lt;&lt;</span><span>&lt;&lt;</span><span>&lt;&lt;</span></span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&lt;</span></span><span>&nbsp;</span><span class="syntax--constant syntax--other syntax--js"><span>HEAD</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--comment syntax--line syntax--double-slash syntax--js"><span class="syntax--punctuation syntax--definition syntax--comment syntax--js"><span>//</span></span><span>&nbsp;break&nbsp;into&nbsp;fragments</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--control syntax--js"><span>for</span></span><span>&nbsp;</span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>(</span></span><span class="syntax--storage syntax--type syntax--var syntax--js"><span>var</span></span><span>&nbsp;i&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>0</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span><span>&nbsp;i&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&lt;</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>2</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span><span>&nbsp;i</span><span class="syntax--keyword syntax--operator syntax--increment syntax--js"><span>++</span></span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>)</span></span><span>&nbsp;</span><span class="syntax--meta syntax--brace syntax--curly syntax--js"><span>{</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--storage syntax--type syntax--var syntax--js"><span>var</span></span><span>&nbsp;roid&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>$</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--entity syntax--name syntax--function syntax--js"><span>extend</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--constant syntax--language syntax--boolean syntax--true syntax--js"><span>true</span></span><span class="syntax--meta syntax--delimiter syntax--object syntax--comma syntax--js"><span>,</span></span><span>&nbsp;</span><span class="syntax--punctuation syntax--section syntax--scope syntax--begin syntax--js"><span>{</span></span><span class="syntax--punctuation syntax--section syntax--scope syntax--end syntax--js"><span>}</span></span><span class="syntax--meta syntax--delimiter syntax--object syntax--comma syntax--js"><span>,</span></span><span>&nbsp;</span><span class="syntax--variable syntax--language syntax--js"><span>this</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>roid</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--object syntax--property syntax--js"><span>vel</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--variable syntax--property syntax--dom syntax--js"><span>x</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--support syntax--class syntax--math syntax--js"><span>Math</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--math syntax--js"><span>random</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>*</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>6</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>-</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>3</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>roid</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--object syntax--property syntax--js"><span>vel</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--variable syntax--property syntax--dom syntax--js"><span>y</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--support syntax--class syntax--math syntax--js"><span>Math</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--math syntax--js"><span>random</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>*</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>6</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>-</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>3</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--control syntax--js"><span>if</span></span><span>&nbsp;</span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>(</span></span><span class="syntax--support syntax--class syntax--math syntax--js"><span>Math</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--math syntax--js"><span>random</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&gt;</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>0</span><span class="syntax--meta syntax--delimiter syntax--decimal syntax--period syntax--js"><span>.</span></span><span>5</span></span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>)</span></span><span>&nbsp;</span><span class="syntax--meta syntax--brace syntax--curly syntax--js"><span>{</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>roid</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--object syntax--property syntax--js"><span>points</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--js"><span>reverse</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--brace syntax--curly syntax--js"><span>}</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>roid</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--object syntax--property syntax--js"><span>vel</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--property syntax--js"><span>rot</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--support syntax--class syntax--math syntax--js"><span>Math</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--math syntax--js"><span>random</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>*</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>2</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>-</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>1</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>roid</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--dom syntax--js"><span>move</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>roid</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--property syntax--js"><span>scale</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>*</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>3</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span><span>&nbsp;</span><span class="syntax--comment syntax--line syntax--double-slash syntax--js"><span class="syntax--punctuation syntax--definition syntax--comment syntax--js"><span>//</span></span><span>&nbsp;give&nbsp;them&nbsp;a&nbsp;little&nbsp;push</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>Game</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--object syntax--property syntax--js"><span>sprites</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--js"><span>push</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span>roid</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--brace syntax--curly syntax--js"><span>}</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span class="syntax--keyword syntax--operator syntax--logical syntax--js"><span>||</span><span>||</span><span>||</span></span><span class="syntax--keyword syntax--operator syntax--bitwise syntax--js"><span>|</span></span><span>&nbsp;merged&nbsp;common&nbsp;ancestors</span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--comment syntax--line syntax--double-slash syntax--js"><span class="syntax--punctuation syntax--definition syntax--comment syntax--js"><span>//</span></span><span>&nbsp;break&nbsp;into&nbsp;fragments</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--control syntax--js"><span>for</span></span><span>&nbsp;</span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>(</span></span><span class="syntax--storage syntax--type syntax--var syntax--js"><span>var</span></span><span>&nbsp;i&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>0</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span><span>&nbsp;i&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&lt;</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>3</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span><span>&nbsp;i</span><span class="syntax--keyword syntax--operator syntax--increment syntax--js"><span>++</span></span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>)</span></span><span>&nbsp;</span><span class="syntax--meta syntax--brace syntax--curly syntax--js"><span>{</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--storage syntax--type syntax--var syntax--js"><span>var</span></span><span>&nbsp;roid&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>$</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--entity syntax--name syntax--function syntax--js"><span>extend</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--constant syntax--language syntax--boolean syntax--true syntax--js"><span>true</span></span><span class="syntax--meta syntax--delimiter syntax--object syntax--comma syntax--js"><span>,</span></span><span>&nbsp;</span><span class="syntax--punctuation syntax--section syntax--scope syntax--begin syntax--js"><span>{</span></span><span class="syntax--punctuation syntax--section syntax--scope syntax--end syntax--js"><span>}</span></span><span class="syntax--meta syntax--delimiter syntax--object syntax--comma syntax--js"><span>,</span></span><span>&nbsp;</span><span class="syntax--variable syntax--language syntax--js"><span>this</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>roid</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--object syntax--property syntax--js"><span>vel</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--variable syntax--property syntax--dom syntax--js"><span>x</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--support syntax--class syntax--math syntax--js"><span>Math</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--math syntax--js"><span>random</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>*</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>6</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>-</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>3</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>roid</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--object syntax--property syntax--js"><span>vel</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--variable syntax--property syntax--dom syntax--js"><span>y</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--support syntax--class syntax--math syntax--js"><span>Math</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--math syntax--js"><span>random</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>*</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>6</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>-</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>3</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--control syntax--js"><span>if</span></span><span>&nbsp;</span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>(</span></span><span class="syntax--support syntax--class syntax--math syntax--js"><span>Math</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--math syntax--js"><span>random</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&gt;</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>0</span><span class="syntax--meta syntax--delimiter syntax--decimal syntax--period syntax--js"><span>.</span></span><span>5</span></span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>)</span></span><span>&nbsp;</span><span class="syntax--meta syntax--brace syntax--curly syntax--js"><span>{</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>roid</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--object syntax--property syntax--js"><span>points</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--js"><span>reverse</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--brace syntax--curly syntax--js"><span>}</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>roid</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--object syntax--property syntax--js"><span>vel</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--property syntax--js"><span>rot</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--support syntax--class syntax--math syntax--js"><span>Math</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--math syntax--js"><span>random</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>*</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>2</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>-</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>1</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>roid</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--dom syntax--js"><span>move</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>roid</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--property syntax--js"><span>scale</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>*</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>3</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span><span>&nbsp;</span><span class="syntax--comment syntax--line syntax--double-slash syntax--js"><span class="syntax--punctuation syntax--definition syntax--comment syntax--js"><span>//</span></span><span>&nbsp;give&nbsp;them&nbsp;a&nbsp;little&nbsp;push</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>Game</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--object syntax--property syntax--js"><span>sprites</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--js"><span>push</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span>roid</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--brace syntax--curly syntax--js"><span>}</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>===</span><span>===</span></span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--variable syntax--language syntax--js"><span>this</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--entity syntax--name syntax--function syntax--js"><span>breakIntoFragments</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span class="syntax--keyword syntax--operator syntax--bitwise syntax--shift syntax--js"><span>&gt;&gt;&gt;</span><span>&gt;&gt;&gt;</span></span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&gt;</span></span><span>&nbsp;master</span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--brace syntax--curly syntax--js"><span>}</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;</span><span class="syntax--punctuation syntax--definition syntax--function syntax--body syntax--end syntax--bracket syntax--curly syntax--js"><span>}</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span class="syntax--punctuation syntax--definition syntax--function syntax--body syntax--end syntax--bracket syntax--curly syntax--js"><span>}</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div></pre>
+<ul>
+<li>其中<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>、<code>||||||| merged common ancestors</code>、<code>=======</code>、<code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; master</code>将代码分出了三个部分<ul>
+<li>第一部分为当前分支中的代码(easy-mode分支)</li>
+<li>第二部分为原始代码，即两个分支从前的交叉点出的代码(master与easy-mode分支的交叉点)</li>
+<li>第三部分为即将被合并的另一分支的代码(master分支)</li>
+<li>这里的情况是希望将master分支与easy-mode分支合并，并在easy-mode分支上新建commit</li>
+</ul>
+</li>
+<li><strong>修改代码时需要记得将产生的这些特殊行删除</strong></li>
+<li>输入<code>git status</code>观察工作区，会发现game.js被修改了两次，即两个分支中均发生了修改</li>
+<li>根据显示的提示，<code>git add game.js</code></li>
+<li>再次输入<code>git status</code>，发现</li>
+</ul>
+<pre class="editor-colors lang-"><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>All&nbsp;conflicts&nbsp;fixed&nbsp;but&nbsp;you&nbsp;are&nbsp;still&nbsp;merging.</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;(use&nbsp;"git&nbsp;commit"&nbsp;to&nbsp;conclude&nbsp;merge)</span></span></div></pre><ul>
+<li>根据提示，输入<code>git commit</code>结束合并，会发现提交的注释信息中会自动显示出conflicts的冲突文件</li>
+</ul>
+<h3 id="-windows-unix-">合并冲突（Windows 与 Unix 系统之间的换行符）</h3>
+<ul>
+<li><p>背景：按下键盘上的“Enter”键时，实际上是告诉计算机在文本文件中插入一个不可见的字符，以便指示计算机应新起一行。Unix 系统会添加一个名为“换行”符的字符（或者 LF 或 \），而 Windows 系统会添加两个字符，即“回车”和“换行”（或者 CRLF 或 \r\n）。</p>
+</li>
+<li><p>老师 Caroline 的文件包含 LF，因为她的文件是在使用 LF 的 Mac OSX 上编辑的。如果某 Windows 用户要编辑 Caroline 的文件，Windows 文本编辑器可能会将所有 LF 均转换为 CRLF，以便该用户能够编辑文件。在该 Windows 用户将她的文件与 Caroline 的文件合并时，不同的 LF 和 CRLF 字符将会造成合并冲突。</p>
+</li>
+<li><p>要修复此问题，Windows 用户应将 autocrlf 全局属性设置为 true：git config --global core.autocrlf true。有关更多信息，请访问以下网址：<a href="https://help.github.com/articles/dealing-with-line-endings/#platform-all">https://help.github.com/articles/dealing-with-line-endings/#platform-all</a></p>
+</li>
+</ul>
+<h2 id="-">垃圾收集过程</h2>
+<p>如果删除某个分支并导致无法从现有的分支访问一些提交，则在 Git 的垃圾收集过程运行之前，仍可继续通过提交 ID 访问这些提交。除非你主动关闭此过程，否则它将不时自动运行。也可以通过命令 <code>git gc</code> 手动运行此过程。</p></body>
+</html>
