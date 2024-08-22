@@ -2,8 +2,6 @@
 layout: default
 ---
 
-Here’s a more visually appealing version of your GitHub README:
-
 ---
 
 <img align="left" src="assets/photo.png" width="100" height="100" hspace="20">
