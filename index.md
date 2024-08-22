@@ -4,7 +4,7 @@ layout: default
 
 ---
 
-<img align="left" src="assets/photo.png" width="100" height="100" hspace="20">
+<img align="left" src="assets/photo.png" height="120" hspace="20">
 
 # Hi there! 👋
 
@@ -33,7 +33,7 @@ I am passionate about leveraging large language models to enhance software engin
 
 - **Ph.D. in Computer Software and Theory**  
   School of Computer Science, Peking University, Beijing, China  
-  *Sept. 2021 - July 2026 (expected)*  
+  *Sept. 2021 - June 2026 (expected)*  
   **Tutor:** Prof. Zhi Jin | **Assistant Tutor:** Prof. Ge Li
 
 - **B.S. in Computer Science and Technology**  
