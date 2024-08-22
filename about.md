@@ -4,6 +4,17 @@ title: About
 permalink: /about/
 ---
 
+
+## Personal Information
+
+**Name:** Kechi Zhang (张克驰)  
+**Address:** Room No. 1726, No. 1 Science Building, Peking University, No. 5 Yiheyuan Road, Haidian District, 100871 Beijing  
+**Email:** [zhangkechi@pku.edu.cn](mailto:zhangkechi@pku.edu.cn)  
+**Homepage:** [Google Scholar](https://scholar.google.com/citations?user=6AuwtXwAAAAJ)
+
+
+---
+
 ## Education
 
 - **Ph.D.**  

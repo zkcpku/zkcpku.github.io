@@ -19,7 +19,6 @@ I am passionate about exploring the intersection of artificial intelligence and 
 **Email:** [zhangkechi@pku.edu.cn](mailto:zhangkechi@pku.edu.cn)  
 **Homepage:** [Google Scholar](https://scholar.google.com/citations?user=6AuwtXwAAAAJ)
 
-![Profile Photo](DSC_079.jpg)
 
 ---
 
