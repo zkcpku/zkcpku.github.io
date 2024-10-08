@@ -3,8 +3,19 @@ layout: page
 title: Publications
 permalink: /publications/
 ---
+## Selected Preprint
 
-## Publications
+- **[arXiv 2024]** ***Kechi Zhang***, Ge Li, Yihong Dong, Jingjing Xu, Jun Zhang, Jing Su, Yongfei Liu, Zhi Jin, CodeDPO: Aligning Code Models with Self Generated and Verified Source Code, arXiv preprint
+
+- **[arXiv 2023]** ***Kechi Zhang***, Huangzhao Zhang, Ge Li, Jia Li, Zhuo Li, Zhi Jin, ToolCoder: Teach Code Generation Models to Use API Search Tool, arXiv preprint, arXiv:2305.04032, 2023.
+
+- **[arXiv 2023]** ***Kechi Zhang***, Jia Li, Zhuo Li, Zhi Jin, Ge Li, Transformer-based Code Model with Compressed Hierarchy Representation, 2023.
+
+- **[arXiv 2022]** ***Kechi Zhang***, Ge Li, Zhi Jin, What Does Transformer Learn About Source Code?, arXiv preprint, arXiv:2207.08466, 2022.
+
+
+
+## Selected Publications
 
 - **[ACL 2024]** ***Kechi Zhang***, Ge Li, Huangzhao Zhang, Zhi Jin, HiRoPE: Length Extrapolation for Code Models Using Hierarchical Position, Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (ACL 2024), Bangkok, Thailand, Aug. 11-16, 2024. (Accepted)
 
@@ -15,12 +26,6 @@ permalink: /publications/
 - **[ICPC 2023]** ***Kechi Zhang***, Zhou Li, Zhi Jin, Ge Li, Implant Global and Local Hierarchy Information to Sequence based Code Representation Models, Proceedings of the 31st IEEE/ACM International Conference on Program Comprehension (ICPC), Melbourne Australia, May 15-16, 2023. ***(🏆ACM SIGSOFT Distinguished Paper Award🏆)***
 
 - **[ICPC 2022]** ***Kechi Zhang***, Wenhan Wang, Huangzhao Zhang, Ge Li, Zhi Jin, Learning to Represent Programs with Heterogeneous Graphs, Proceedings of the 30th ACM/IEEE International Conference on Program Comprehension (ICPC), Pittsburgh, PA, USA, May 16-17, 2022.
-
-- **[arXiv 2023]** ***Kechi Zhang***, Huangzhao Zhang, Ge Li, Jia Li, Zhuo Li, Zhi Jin, ToolCoder: Teach Code Generation Models to Use API Search Tool, arXiv preprint, arXiv:2305.04032, 2023.
-
-- **[arXiv 2023]** ***Kechi Zhang***, Jia Li, Zhuo Li, Zhi Jin, Ge Li, Transformer-based Code Model with Compressed Hierarchy Representation, 2023.
-
-- **[arXiv 2022]** ***Kechi Zhang***, Ge Li, Zhi Jin, What Does Transformer Learn About Source Code?, arXiv preprint, arXiv:2207.08466, 2022.
 
 - **[SCIS, 2024]** Huangzhao Zhang, ***Kechi Zhang***, Zhuo Li, Jia Li, Jia Li, Yongmin Li, Yunfei Zhao, Yuqi Zhu, Fang Liu, Ge Li, Zhi Jin. Deep Learning for Code Generation: A Survey, Science China Information Sciences (SCIS), doi: 10.1007/s11432-023-3956-3, Feb 6, 2024.
 
