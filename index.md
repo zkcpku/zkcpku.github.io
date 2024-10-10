@@ -34,7 +34,7 @@ I am passionate about leveraging large language models to enhance software engin
 - **Ph.D. in Computer Software and Theory**  
   School of Computer Science, Peking University, Beijing, China  
   *Sept. 2021 - June 2026 (expected)*  
-  **Tutor:** Prof. Zhi Jin | **Assistant Tutor:** Prof. Ge Li
+  **Tutor:** Prof. Zhi Jin, Prof. Ge Li
 
 - **B.S. in Computer Science and Technology**  
   School of EECS, Peking University, Beijing, China  
