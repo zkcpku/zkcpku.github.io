@@ -15,6 +15,10 @@ My research is at the fascinating intersection of **AI4SE**, **LLMs for Code**, 
 
 I am passionate about leveraging large language models to enhance software engineering and the way we generate and represent code.
 
+Email: zhangkechi@pku.edu.cn
+
+Homepage: [Google Scholar](https://scholar.google.com/citations?user=6AuwtXwAAAAJ&hl=en)
+
 ---
 
 ## 🔍 **Research Focus**
@@ -59,6 +63,9 @@ I am passionate about leveraging large language models to enhance software engin
   
 - **Heterogeneous Code GNN** | *ICPC 2022*  
   Proposing a heterogeneous graph representation model for programs.
+
+- **CodeDPO**  
+  A preference optimization framework for code models that focuses on both correctness and efficiency without depending on external resources.
   
 - **ToolCoder**  
   Tool-enhanced learning method embedding external API search tools into code generation models.
