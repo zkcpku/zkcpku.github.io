@@ -5,6 +5,8 @@ permalink: /publications/
 ---
 ## Selected Preprint
 
+- **[arXiv 2025]** ***Kechi Zhang***, Ge Li, Jia Li, Yihong Dong, Jia Li, Zhi Jin, Focused-DPO: Enhancing Code Generation Through Focused Preference Optimization on Error-Prone Points, arXiv preprint
+
 - **[arXiv 2024]** ***Kechi Zhang***, Ge Li, Yihong Dong, Jingjing Xu, Jun Zhang, Jing Su, Yongfei Liu, Zhi Jin, CodeDPO: Aligning Code Models with Self Generated and Verified Source Code, arXiv preprint
 
 - **[arXiv 2023]** ***Kechi Zhang***, Huangzhao Zhang, Ge Li, Jia Li, Zhuo Li, Zhi Jin, ToolCoder: Teach Code Generation Models to Use API Search Tool, arXiv preprint, arXiv:2305.04032, 2023.
