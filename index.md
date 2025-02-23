@@ -25,6 +25,7 @@ Homepage: [Google Scholar](https://scholar.google.com/citations?user=6AuwtXwAAAA
 
 - **AI4SE & LLMs for Code**
   - **Code Generation and Representation through Deep Learning**
+  - Reinforcement Learning for Long Reasoning Code Models
   - Pre-training, fine-tuning, and alignment of Code LLMs
   - Tool Enhancement and Agent Technology for Code Models
   - Length Extrapolation for Code Models
