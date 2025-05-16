@@ -7,10 +7,6 @@ permalink: /publications/
 
 - **[arXiv 2025]** ***Kechi Zhang***, Huangzhao Zhang, Ge Li, Jinliang You, Jia Li, Yunfei Zhao, Zhi Jin, SEAlign: Alignment Training for Software Engineering Agent, arXiv preprint
 
-- **[arXiv 2025]** ***Kechi Zhang***, Ge Li, Jia Li, Yihong Dong, Jia Li, Zhi Jin, Focused-DPO: Enhancing Code Generation Through Focused Preference Optimization on Error-Prone Points, arXiv preprint
-
-- **[arXiv 2024]** ***Kechi Zhang***, Ge Li, Yihong Dong, Jingjing Xu, Jun Zhang, Jing Su, Yongfei Liu, Zhi Jin, CodeDPO: Aligning Code Models with Self Generated and Verified Source Code, arXiv preprint
-
 - **[arXiv 2023]** ***Kechi Zhang***, Huangzhao Zhang, Ge Li, Jia Li, Zhuo Li, Zhi Jin, ToolCoder: Teach Code Generation Models to Use API Search Tool, arXiv preprint, arXiv:2305.04032, 2023.
 
 - **[arXiv 2022]** ***Kechi Zhang***, Ge Li, Zhi Jin, What Does Transformer Learn About Source Code?, arXiv preprint, arXiv:2207.08466, 2022.
@@ -18,6 +14,10 @@ permalink: /publications/
 
 
 ## Selected Publications
+
+- **[ACL 2025]** ***Kechi Zhang***, Ge Li, Jia Li, Yihong Dong, Jia Li, Zhi Jin, Focused-DPO: Enhancing Code Generation Through Focused Preference Optimization on Error-Prone Points
+
+- **[ACL 2025]** ***Kechi Zhang***, Ge Li, Yihong Dong, Jingjing Xu, Jun Zhang, Jing Su, Yongfei Liu, Zhi Jin, CodeDPO: Aligning Code Models with Self Generated and Verified Source Code
 
 - **[EMSE 2025]** ***Kechi Zhang***, Jia Li, Zhuo Li, Zhi Jin, Ge Li, Transformer-based Code Model with Compressed Hierarchy Representation, Empirical Software Engineering, 10.1007/s10664-025-10612-6.
 
