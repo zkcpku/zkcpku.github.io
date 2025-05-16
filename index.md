@@ -50,6 +50,12 @@ Homepage: [Google Scholar](https://scholar.google.com/citations?user=6AuwtXwAAAA
 
 ## 📝 **Selected Publications**
 
+- **CodeDPO** | *ACL 2025 Main Conference*  
+  A preference optimization framework for code models that focuses on both correctness and efficiency without depending on external resources.
+
+- **FocusedDPO** | *ACL 2025 Finding*  
+  Fine-graind optimization for code models with Error-Prone Points Identification.
+
 - **CodeAgent** | *ACL 2024 Main Conference*  
   Integrating multiple programming assistance tools into large models for practical problem-solving.
   
@@ -65,9 +71,6 @@ Homepage: [Google Scholar](https://scholar.google.com/citations?user=6AuwtXwAAAA
 - **Heterogeneous Code GNN** | *ICPC 2022*  
   Proposing a heterogeneous graph representation model for programs.
 
-- **CodeDPO**  
-  A preference optimization framework for code models that focuses on both correctness and efficiency without depending on external resources.
-  
 - **ToolCoder**  
   Tool-enhanced learning method embedding external API search tools into code generation models.
   
