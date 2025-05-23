@@ -21,15 +21,19 @@ permalink: /publications/
 
 - **[EMSE 2025]** ***Kechi Zhang***, Jia Li, Zhuo Li, Zhi Jin, Ge Li, Transformer-based Code Model with Compressed Hierarchy Representation, Empirical Software Engineering, 10.1007/s10664-025-10612-6.
 
-- **[ACL 2024]** ***Kechi Zhang***, Ge Li, Huangzhao Zhang, Zhi Jin, HiRoPE: Length Extrapolation for Code Models Using Hierarchical Position, Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (ACL 2024), Bangkok, Thailand, Aug. 11-16, 2024. (Accepted)
+- **[ACL 2024]** ***Kechi Zhang***, Ge Li, Huangzhao Zhang, Zhi Jin, HiRoPE: Length Extrapolation for Code Models Using Hierarchical Position, Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (ACL 2024), Bangkok, Thailand, Aug. 11-16, 2024.
 
-- **[ACL 2024]** ***Kechi Zhang***, Jia Li, Ge Li, Xianjie Shi, Zhi Jin, CodeAgent: Enhancing Code Generation with Tool-Integrated Agent Systems for Real-World Repo-level Coding Challenges, Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (ACL 2024), Bangkok, Thailand, Aug. 11-16, 2024. (Accepted)
+- **[ACL 2024]** ***Kechi Zhang***, Jia Li, Ge Li, Xianjie Shi, Zhi Jin, CodeAgent: Enhancing Code Generation with Tool-Integrated Agent Systems for Real-World Repo-level Coding Challenges, Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (ACL 2024), Bangkok, Thailand, Aug. 11-16, 2024.
 
 - **[ACL 2023]** ***Kechi Zhang***, Zhuo Li, Jia Allen Li, Ge Li, Zhi Jin, Self-Edit: Fault-Aware Code Editor for Code Generation, Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (ACL), Toronto, Canada, July 9-14, 2023.
 
 - **[ICPC 2023]** ***Kechi Zhang***, Zhou Li, Zhi Jin, Ge Li, Implant Global and Local Hierarchy Information to Sequence based Code Representation Models, Proceedings of the 31st IEEE/ACM International Conference on Program Comprehension (ICPC), Melbourne Australia, May 15-16, 2023. ***(🏆ACM SIGSOFT Distinguished Paper Award🏆)***
 
 - **[ICPC 2022]** ***Kechi Zhang***, Wenhan Wang, Huangzhao Zhang, Ge Li, Zhi Jin, Learning to Represent Programs with Heterogeneous Graphs, Proceedings of the 30th ACM/IEEE International Conference on Program Comprehension (ICPC), Pittsburgh, PA, USA, May 16-17, 2022.
+
+- **[ACL 2025]** Xiancai Chen, Zhengwei Tao, ***Kechi Zhang***, Changzhi Zhou, Xinyu Zhang, Wanli Gu, Yuanpeng He, Mengdi Zhang, Xunliang Cai, Haiyan Zhao, Zhi Jin; Revisit Self-Debugging with Self-Generated Tests for Code Generation
+
+- **[ACL 2025]** Jia Li, Xuyuan Guo, Lei Li, ***Kechi Zhang***, Ge Li, Jia Li, Zhengwei Tao, Fang Liu, Chongyang Tao, Yuqi Zhu, Zhi Jin; Benchmarking Long-Context Language Models on Long Code Understanding
 
 - **[ICSE, 2025]** Siyuan Jiang, Jia Li, He Zong, Huanyu Liu, Hao Zhu, Shukai Hu, Erlu Li, Jiazheng Ding, Yu Han, Wei Ning, Gen Wang, Yihong Dong, ***Kechi Zhang***, Ge Li; aiXcoder-7B: A Lightweight and Effective Large Language Model for Code Completion; Proceedings of the 47th IEEE/ACM International Conference on Software Engineering (ICSE), Ottawa, Ontario, Canada, Apr. 27 - May 3, 2025 (Accepted).
 
