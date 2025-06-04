@@ -65,8 +65,10 @@ Homepage: [Google Scholar](https://scholar.google.com/citations?user=6AuwtXwAAAA
 - **Self-Edit** | *ACL 2023 Main Conference*  
   Early exploration into the self-repair capability of large models in code generation.
   
-- **Hierarchy Transformer** | *ICPC 2023* | **🏆ACM SIGSOFT Distinguished Paper Award**  
+- **Hierarchy Transformer** | *ICPC 2023* & *EMSE 2024* | **🏆ACM SIGSOFT Distinguished Paper Award**  
   A novel Transformer structure for modeling both sequence and structural information in source code.
+  
+  We further pretrain the 125M code model with this new architecture.
   
 - **Heterogeneous Code GNN** | *ICPC 2022*  
   Proposing a heterogeneous graph representation model for programs.
