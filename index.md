@@ -50,6 +50,9 @@ Homepage: [Google Scholar](https://scholar.google.com/citations?user=6AuwtXwAAAA
 
 ## 📝 **Selected Publications**
 
+- **SEAlign** | *ICSE 2026*  
+  A novel alignment framework aimed at bridging the gap between code generation models and real-world software engineering agent.
+
 - **CodeDPO** | *ACL 2025 Main Conference*  
   A preference optimization framework for code models that focuses on both correctness and efficiency without depending on external resources.
 
