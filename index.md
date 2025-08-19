@@ -15,6 +15,8 @@ My research is at the fascinating intersection of **AI4SE**, **LLMs for Code**, 
 
 I am passionate about leveraging large language models to enhance software engineering and the way we generate and represent code.
 
+**I am now dedicated to building a powerful code agent capable of end-to-end generation of production-ready code, joining outstanding counterparts like Claude Code in striving to transform software engineering development workflows!**
+
 Email: zhangkechi@pku.edu.cn
 
 Homepage: [Google Scholar](https://scholar.google.com/citations?user=6AuwtXwAAAAJ&hl=en)
