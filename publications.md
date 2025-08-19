@@ -5,6 +5,8 @@ permalink: /publications/
 ---
 ## Selected Preprint
 
+- **[arXiv 2025]** ***Kechi Zhang***, Ge Li, Jia Li, Huangzhao Zhang, Yihong Dong, Jia Li, Jingjing Xu, and Zhi Jin, StackTrans: From Large Language Model to Large Pushdown Automata Model, arXiv preprint
+
 - **[arXiv 2025]** ***Kechi Zhang***, Ge Li, Jia Li, Huangzhao Zhang, Jingjing Xu, Hao Zhu, Lecheng Wang, Jia Li, Yihong Dong, Jing Mai, Bin Gu, and Zhi Jin, Computational Thinking Reasoning in Large Language Models, arXiv preprint
 
 - **[arXiv 2023]** ***Kechi Zhang***, Huangzhao Zhang, Ge Li, Jia Li, Zhuo Li, Zhi Jin, ToolCoder: Teach Code Generation Models to Use API Search Tool, arXiv preprint, arXiv:2305.04032, 2023.
