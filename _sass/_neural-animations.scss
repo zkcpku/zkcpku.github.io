@@ -1,0 +1,676 @@
+// Neural Network CSS Animations
+// AI-inspired visual elements and animations for AI coding theme
+
+// Neural network background animation
+.ai-neural-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 30%),
+      radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.05) 0%, transparent 30%),
+      radial-gradient(circle at 40% 40%, rgba(6, 182, 212, 0.03) 0%, transparent 25%);
+    animation: ai-neural-drift 20s linear infinite;
+  }
+}
+
+@keyframes ai-neural-drift {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+// Neural network node animations
+.ai-neural-node {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--ai-primary);
+  position: absolute;
+  animation: ai-neural-pulse 2s ease-in-out infinite;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 50%;
+    border: 1px solid var(--ai-primary);
+    animation: ai-neural-ripple 2s ease-out infinite;
+  }
+  
+  &--large {
+    width: 16px;
+    height: 16px;
+    background: var(--ai-secondary);
+    animation-duration: 1.5s;
+  }
+  
+  &--small {
+    width: 8px;
+    height: 8px;
+    background: var(--ai-accent);
+    animation-duration: 2.5s;
+  }
+}
+
+@keyframes ai-neural-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes ai-neural-ripple {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+// Neural connection lines
+.ai-neural-connection {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    var(--ai-primary) 0%, 
+    var(--ai-accent) 50%, 
+    var(--ai-secondary) 100%);
+  transform-origin: left center;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: white;
+    box-shadow: 0 0 6px var(--ai-primary);
+    animation: ai-neural-flow 3s linear infinite;
+  }
+}
+
+@keyframes ai-neural-flow {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 20px;
+    left: calc(50% - 10px);
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+// Code processing animation
+.ai-code-flow {
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      rgba(59, 130, 246, 0.2) 50%, 
+      transparent 100%);
+    animation: ai-code-scan 2s linear infinite;
+  }
+}
+
+@keyframes ai-code-scan {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+// Matrix rain effect
+.ai-matrix-rain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+  
+  .rain-column {
+    position: absolute;
+    top: -100%;
+    width: 2px;
+    height: 100px;
+    background: linear-gradient(to bottom, 
+      transparent 0%, 
+      var(--ai-accent) 50%, 
+      transparent 100%);
+    animation: ai-matrix-fall linear infinite;
+    
+    &:nth-child(odd) {
+      animation-duration: 3s;
+      height: 80px;
+    }
+    
+    &:nth-child(even) {
+      animation-duration: 4s;
+      height: 120px;
+    }
+    
+    &:nth-child(3n) {
+      animation-duration: 2.5s;
+      height: 60px;
+    }
+  }
+}
+
+@keyframes ai-matrix-fall {
+  0% {
+    top: -100%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 100vh;
+    opacity: 0;
+  }
+}
+
+// Circuit board pattern
+.ai-circuit-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 25% 25%, var(--ai-primary) 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, var(--ai-accent) 1px, transparent 1px),
+    linear-gradient(90deg, transparent 24%, rgba(59, 130, 246, 0.1) 25%, rgba(59, 130, 246, 0.1) 26%, transparent 27%),
+    linear-gradient(0deg, transparent 24%, rgba(6, 182, 212, 0.1) 25%, rgba(6, 182, 212, 0.1) 26%, transparent 27%);
+  background-size: 40px 40px, 40px 40px, 40px 40px, 40px 40px;
+  animation: ai-circuit-flow 10s linear infinite;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes ai-circuit-flow {
+  0% {
+    background-position: 0 0, 0 0, 0 0, 0 0;
+  }
+  100% {
+    background-position: 40px 40px, -40px -40px, 40px 0, 0 40px;
+  }
+}
+
+// Data processing loader
+.ai-data-loader {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 2rem auto;
+  
+  .loader-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    
+    &:nth-child(1) {
+      border-top-color: var(--ai-primary);
+      animation: ai-loader-spin 1.5s linear infinite;
+    }
+    
+    &:nth-child(2) {
+      border-right-color: var(--ai-accent);
+      animation: ai-loader-spin 1.5s linear infinite reverse;
+      animation-delay: -0.5s;
+    }
+    
+    &:nth-child(3) {
+      border-bottom-color: var(--ai-secondary);
+      animation: ai-loader-spin 1.5s linear infinite;
+      animation-delay: -1s;
+    }
+  }
+  
+  .loader-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: var(--ai-primary);
+    border-radius: 50%;
+    animation: ai-neural-pulse 1s ease-in-out infinite;
+  }
+}
+
+@keyframes ai-loader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// AI thinking animation
+.ai-thinking {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  
+  .thinking-dots {
+    display: flex;
+    gap: 0.25rem;
+    
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--ai-primary);
+      animation: ai-thinking-bounce 1.4s ease-in-out infinite both;
+      
+      &:nth-child(1) { animation-delay: -0.32s; }
+      &:nth-child(2) { animation-delay: -0.16s; }
+      &:nth-child(3) { animation-delay: 0s; }
+    }
+  }
+}
+
+@keyframes ai-thinking-bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+// Neural network SVG component
+.ai-neural-svg {
+  width: 100%;
+  height: 300px;
+  
+  .node {
+    fill: var(--ai-primary);
+    animation: ai-svg-pulse 2s ease-in-out infinite;
+    
+    &.input { fill: var(--ai-accent); }
+    &.hidden { fill: var(--ai-secondary); }
+    &.output { fill: var(--success); }
+  }
+  
+  .connection {
+    stroke: var(--border-medium);
+    stroke-width: 1;
+    opacity: 0.6;
+    animation: ai-svg-flow 3s ease-in-out infinite;
+    
+    &.active {
+      stroke: var(--ai-primary);
+      stroke-width: 2;
+      opacity: 1;
+    }
+  }
+  
+  .data-pulse {
+    fill: white;
+    animation: ai-svg-data-flow 2s linear infinite;
+  }
+}
+
+@keyframes ai-svg-pulse {
+  0%, 100% {
+    r: 6;
+    fill-opacity: 0.8;
+  }
+  50% {
+    r: 8;
+    fill-opacity: 1;
+  }
+}
+
+@keyframes ai-svg-flow {
+  0%, 100% {
+    stroke-dasharray: 5 10;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 5 10;
+    stroke-dashoffset: 15;
+  }
+}
+
+@keyframes ai-svg-data-flow {
+  0% {
+    r: 2;
+    fill-opacity: 1;
+  }
+  50% {
+    r: 4;
+    fill-opacity: 0.8;
+  }
+  100% {
+    r: 2;
+    fill-opacity: 1;
+  }
+}
+
+// Glow effects for AI elements
+.ai-glow {
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--ai-primary), var(--ai-secondary), var(--ai-accent));
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+  }
+  
+  &:hover::before {
+    opacity: 0.6;
+    animation: ai-glow-pulse 1s ease-in-out infinite;
+  }
+}
+
+@keyframes ai-glow-pulse {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+// Model training progress animation
+.ai-training-progress {
+  position: relative;
+  height: 4px;
+  background: var(--tertiary-bg);
+  border-radius: 2px;
+  overflow: hidden;
+  
+  .progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--ai-primary), var(--ai-accent));
+    border-radius: 2px;
+    position: relative;
+    animation: ai-training-fill 3s ease-in-out infinite;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255, 255, 255, 0.4) 50%, 
+        transparent 100%);
+      animation: ai-training-shimmer 1.5s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes ai-training-fill {
+  0% { width: 0%; }
+  50% { width: 70%; }
+  100% { width: 100%; }
+}
+
+@keyframes ai-training-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+// Code generation animation
+.ai-code-gen {
+  position: relative;
+  font-family: var(--font-mono);
+  
+  .generated-line {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: ai-code-appear 0.5s ease-out forwards;
+    
+    &:nth-child(1) { animation-delay: 0.2s; }
+    &:nth-child(2) { animation-delay: 0.4s; }
+    &:nth-child(3) { animation-delay: 0.6s; }
+    &:nth-child(4) { animation-delay: 0.8s; }
+    &:nth-child(5) { animation-delay: 1.0s; }
+  }
+  
+  .cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1.2em;
+    background: var(--ai-primary);
+    animation: ai-cursor-blink 1s step-end infinite;
+    margin-left: 2px;
+  }
+}
+
+@keyframes ai-code-appear {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes ai-cursor-blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+// Neural network layers visualization
+.ai-layers-viz {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 2rem;
+  
+  .layer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    
+    .layer-nodes {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    
+    .layer-node {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--ai-primary);
+      animation: ai-layer-pulse 2s ease-in-out infinite;
+      
+      &:nth-child(odd) {
+        animation-delay: 0.2s;
+      }
+      
+      &:nth-child(even) {
+        animation-delay: 0.4s;
+      }
+    }
+    
+    .layer-label {
+      font-size: 0.875rem;
+      color: var(--secondary-text);
+      text-align: center;
+      font-family: var(--font-mono);
+    }
+    
+    &.input .layer-node { background: var(--ai-accent); }
+    &.hidden .layer-node { background: var(--ai-secondary); }
+    &.output .layer-node { background: var(--success); }
+  }
+  
+  .layer-connection {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, 
+      var(--border-light) 0%, 
+      var(--ai-primary) 50%, 
+      var(--border-light) 100%);
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 0;
+      width: 0;
+      height: 4px;
+      background: var(--ai-primary);
+      box-shadow: 0 0 8px var(--ai-primary);
+      animation: ai-connection-flow 2s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes ai-layer-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+  }
+}
+
+@keyframes ai-connection-flow {
+  0% {
+    width: 0%;
+    left: 0%;
+  }
+  50% {
+    width: 30%;
+    left: 35%;
+  }
+  100% {
+    width: 0%;
+    left: 100%;
+  }
+}
+
+// Responsive design for neural animations
+@media (max-width: 768px) {
+  .ai-neural-svg {
+    height: 200px;
+  }
+  
+  .ai-layers-viz {
+    flex-direction: column;
+    gap: 1rem;
+    
+    .layer-connection {
+      width: 2px;
+      height: 50px;
+      background: linear-gradient(to bottom, 
+        var(--border-light) 0%, 
+        var(--ai-primary) 50%, 
+        var(--border-light) 100%);
+      
+      &::before {
+        width: 4px;
+        height: 0;
+        animation: ai-connection-flow-vertical 2s ease-in-out infinite;
+      }
+    }
+  }
+}
+
+@keyframes ai-connection-flow-vertical {
+  0% {
+    height: 0%;
+    top: 0%;
+  }
+  50% {
+    height: 30%;
+    top: 35%;
+  }
+  100% {
+    height: 0%;
+    top: 100%;
+  }
+}
+
+// Disable animations for users who prefer reduced motion
+@media (prefers-reduced-motion: reduce) {
+  .ai-neural-bg,
+  .ai-neural-node,
+  .ai-neural-connection,
+  .ai-code-flow,
+  .ai-matrix-rain,
+  .ai-circuit-bg,
+  .ai-data-loader,
+  .ai-thinking,
+  .ai-neural-svg *,
+  .ai-glow,
+  .ai-training-progress,
+  .ai-code-gen,
+  .ai-layers-viz * {
+    animation: none !important;
+  }
+}

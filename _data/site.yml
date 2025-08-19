@@ -1,0 +1,120 @@
+# Site configuration and personal information
+# Used for dynamic content generation across the site
+
+personal_info:
+  name: "Kechi Zhang"
+  chinese_name: "张克驰"
+  title: "AI Coding Researcher"
+  current_position: "Ph.D. Candidate"
+  institution: "Peking University"
+  expected_graduation: "June 2026"
+  
+  bio: |
+    I'm passionate about leveraging large language models to enhance software engineering 
+    and the way we generate and represent code. My research focuses on building powerful 
+    code agents capable of end-to-end generation of production-ready code.
+
+  mission: |
+    I am now dedicated to building a powerful code agent capable of end-to-end generation 
+    of production-ready code, joining outstanding counterparts like Claude Code in striving 
+    to transform software engineering development workflows!
+
+contact_info:
+  email: "zhangkechi@pku.edu.cn"
+  address: 
+    room: "Room No. 1726, No. 1 Science Building"
+    university: "Peking University"
+    street: "No. 5 Yiheyuan Road, Haidian District"
+    city: "Beijing"
+    postal_code: "100871"
+    country: "China"
+
+social_links:
+  - name: "Google Scholar"
+    url: "https://scholar.google.com/citations?user=6AuwtXwAAAAJ&hl=en"
+    icon: "scholar"
+    color: "#4285f4"
+
+  - name: "GitHub"
+    url: "https://github.com/zkcpku"
+    icon: "github"
+    color: "#333"
+
+  - name: "Email"
+    url: "mailto:zhangkechi@pku.edu.cn"
+    icon: "email"
+    color: "#ea4335"
+
+  - name: "ORCID"
+    url: "https://orcid.org/0000-0000-0000-0000"
+    icon: "orcid"
+    color: "#a6ce39"
+
+education:
+  - degree: "Ph.D. in Computer Software and Theory"
+    institution: "School of Computer Science, Peking University"
+    location: "Beijing, China"
+    duration: "Sept. 2021 - June 2026 (expected)"
+    advisors: ["Prof. Zhi Jin", "Prof. Ge Li"]
+    description: "Intelligent Software and Requirement Engineering"
+
+  - degree: "B.S. in Computer Science and Technology"
+    institution: "School of EECS, Peking University"
+    location: "Beijing, China"
+    duration: "Sept. 2017 - July 2021"
+    gpa: "~3.60 (Top 25%)"
+    description: "Comprehensive computer science education with focus on algorithms and software engineering"
+
+research_interests:
+  primary:
+    - "AI for Software Engineering (AI4SE)"
+    - "Large Language Models for Code"
+    - "Code Generation and Representation"
+    - "Neural Code Intelligence"
+
+  secondary:
+    - "Reinforcement Learning for Code Models"
+    - "Pre-training and Fine-tuning of Code LLMs"
+    - "Tool Enhancement and Agent Technology"
+    - "Length Extrapolation for Code Models"
+    - "Project-level Code Generation"
+    - "Structural Information-based Code Representation"
+
+news:
+  - date: "2025-01"
+    content: "Two papers accepted to ACL 2025 Main Conference and Findings!"
+    type: "publication"
+
+  - date: "2024-11"
+    content: "SEAlign paper accepted to ICSE 2026!"
+    type: "publication"
+
+  - date: "2024-08"
+    content: "Attended ACL 2024 in Bangkok, Thailand."
+    type: "conference"
+
+  - date: "2024-05"
+    content: "Two papers accepted to ACL 2024 Main Conference!"
+    type: "publication"
+
+  - date: "2023-05"
+    content: "🏆 Received ACM SIGSOFT Distinguished Paper Award at ICPC 2023!"
+    type: "award"
+
+typing_animation:
+  lines:
+    - "AI for Software Engineering"
+    - "Large Language Models for Code"
+    - "Code Generation & Representation"
+    - "Intelligent Programming Tools"
+    - "Neural Code Intelligence"
+  speed: 80
+  pause: 2000
+
+theme_colors:
+  primary: "#3b82f6"
+  secondary: "#8b5cf6"
+  accent: "#06b6d4"
+  success: "#10b981"
+  warning: "#f59e0b"
+  error: "#ef4444"

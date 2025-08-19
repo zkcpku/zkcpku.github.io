@@ -1,0 +1,38 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Theme color for mobile browsers -->
+  <meta name="theme-color" content="#3b82f6">
+  <meta name="msapplication-navbutton-color" content="#3b82f6">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#3b82f6">
+
+  {%- seo -%}
+  
+  <!-- Preload critical fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="{{ "/assets/favicon.png" | relative_url }}">
+  
+  <!-- RSS Feed -->
+  {%- feed_meta -%}
+
+  <!-- Prevent FOUC (Flash of Unstyled Content) -->
+  <script>
+    // Apply theme immediately to prevent flash
+    (function() {
+      const theme = localStorage.getItem('ai-theme') || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+    {%- include google-analytics.html -%}
+  {%- endif -%}
+</head>

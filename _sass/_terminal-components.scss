@@ -1,0 +1,535 @@
+// Terminal and IDE-inspired components
+// Developer-focused UI elements with coding aesthetics
+
+// Terminal window component
+.ai-terminal {
+  background: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  font-family: var(--font-mono);
+  margin: 2rem 0;
+  
+  &__header {
+    background: #2d2d2d;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid #404040;
+    
+    &-buttons {
+      display: flex;
+      gap: 0.5rem;
+    }
+    
+    &-button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      
+      &--close { background: #ff5f56; }
+      &--minimize { background: #ffbd2e; }
+      &--maximize { background: #27ca3f; }
+    }
+    
+    &-title {
+      color: #cccccc;
+      font-size: 0.875rem;
+      margin-left: 1rem;
+    }
+  }
+  
+  &__content {
+    padding: 1rem;
+    color: #d4d4d4;
+    line-height: 1.6;
+    min-height: 200px;
+    
+    .prompt {
+      color: #569cd6;
+      
+      &::before {
+        content: '$ ';
+        color: #6a9955;
+      }
+    }
+    
+    .output {
+      color: #d4d4d4;
+      margin-left: 1rem;
+    }
+    
+    .error {
+      color: #f48771;
+    }
+    
+    .success {
+      color: #4ec9b0;
+    }
+    
+    .comment {
+      color: #6a9955;
+    }
+  }
+}
+
+// Code editor component
+.ai-code-editor {
+  background: var(--code-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  font-family: var(--font-mono);
+  margin: 2rem 0;
+  
+  &__header {
+    background: #252526;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid #3e3e3e;
+    
+    &-tab {
+      background: #2d2d30;
+      color: #cccccc;
+      padding: 0.5rem 1rem;
+      border-radius: 4px 4px 0 0;
+      font-size: 0.875rem;
+      position: relative;
+      
+      &--active {
+        background: var(--code-bg);
+        color: white;
+      }
+      
+      &-close {
+        margin-left: 0.5rem;
+        color: #888;
+        cursor: pointer;
+        
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+  
+  &__content {
+    padding: 1rem;
+    color: var(--code-text);
+    line-height: 1.6;
+    position: relative;
+    
+    .line-numbers {
+      position: absolute;
+      left: 0;
+      top: 1rem;
+      bottom: 1rem;
+      width: 3rem;
+      background: #262626;
+      color: #858585;
+      padding: 0 0.5rem;
+      font-size: 0.875rem;
+      text-align: right;
+      border-right: 1px solid #3e3e3e;
+      
+      .line-number {
+        display: block;
+        height: 1.6em;
+      }
+    }
+    
+    .code-content {
+      margin-left: 3.5rem;
+      
+      .keyword { color: var(--code-keyword); }
+      .string { color: var(--code-string); }
+      .comment { color: var(--code-comment); }
+      .function { color: var(--code-function); }
+      .variable { color: #9cdcfe; }
+      .number { color: #b5cea8; }
+      .operator { color: #d4d4d4; }
+    }
+  }
+}
+
+// File explorer component
+.ai-file-explorer {
+  background: var(--secondary-bg);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  
+  &__header {
+    background: var(--tertiary-bg);
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border-light);
+    font-weight: 600;
+    color: var(--primary-text);
+  }
+  
+  &__tree {
+    padding: 1rem;
+    
+    .folder,
+    .file {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.25rem 0;
+      cursor: pointer;
+      color: var(--secondary-text);
+      transition: color var(--transition-fast);
+      
+      &:hover {
+        color: var(--ai-primary);
+      }
+      
+      .icon {
+        width: 1rem;
+        text-align: center;
+      }
+    }
+    
+    .folder {
+      font-weight: 500;
+      
+      .icon::before {
+        content: '📁';
+      }
+      
+      &.expanded .icon::before {
+        content: '📂';
+      }
+    }
+    
+    .file {
+      margin-left: 1.5rem;
+      
+      &.py .icon::before { content: '🐍'; }
+      &.js .icon::before { content: '📄'; }
+      &.md .icon::before { content: '📝'; }
+      &.json .icon::before { content: '⚙️'; }
+      &.yml .icon::before { content: '🔧'; }
+      &.default .icon::before { content: '📄'; }
+    }
+  }
+}
+
+// Command palette component
+.ai-command-palette {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(600px, 90vw);
+  background: var(--secondary-bg);
+  border: 1px solid var(--border-medium);
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+  z-index: 1000;
+  font-family: var(--font-mono);
+  display: none;
+  
+  &.active {
+    display: block;
+  }
+  
+  &__input {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    background: transparent;
+    color: var(--primary-text);
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    outline: none;
+    border-bottom: 1px solid var(--border-light);
+    
+    &::placeholder {
+      color: var(--accent-text);
+    }
+  }
+  
+  &__results {
+    max-height: 300px;
+    overflow-y: auto;
+    
+    .result-item {
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      cursor: pointer;
+      border-bottom: 1px solid var(--border-light);
+      transition: background-color var(--transition-fast);
+      
+      &:hover,
+      &.selected {
+        background: var(--tertiary-bg);
+      }
+      
+      .icon {
+        width: 1.5rem;
+        color: var(--ai-primary);
+      }
+      
+      .content {
+        flex: 1;
+        
+        .title {
+          font-weight: 500;
+          color: var(--primary-text);
+        }
+        
+        .description {
+          font-size: 0.875rem;
+          color: var(--secondary-text);
+        }
+      }
+      
+      .shortcut {
+        color: var(--accent-text);
+        font-size: 0.75rem;
+        background: var(--tertiary-bg);
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+// Status bar component
+.ai-status-bar {
+  background: var(--ai-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  &__left,
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    
+    .icon {
+      width: 1rem;
+    }
+  }
+}
+
+// IDE sidebar component
+.ai-sidebar {
+  background: var(--secondary-bg);
+  border-right: 1px solid var(--border-light);
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  overflow-y: auto;
+  font-family: var(--font-mono);
+  transform: translateX(-100%);
+  transition: transform var(--transition-normal);
+  
+  &.active {
+    transform: translateX(0);
+  }
+  
+  &__header {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-light);
+    background: var(--tertiary-bg);
+    
+    .title {
+      font-weight: 600;
+      color: var(--primary-text);
+    }
+  }
+  
+  &__section {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-light);
+    
+    .section-title {
+      font-weight: 500;
+      color: var(--primary-text);
+      margin-bottom: 1rem;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    .section-content {
+      color: var(--secondary-text);
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+  }
+}
+
+// Breadcrumb navigation
+.ai-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--secondary-text);
+  
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+    &:not(:last-child)::after {
+      content: '/';
+      color: var(--accent-text);
+    }
+    
+    a {
+      color: var(--ai-primary);
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Console output component
+.ai-console {
+  background: #0c0c0c;
+  color: #cccccc;
+  font-family: var(--font-mono);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  margin: 2rem 0;
+  
+  &__line {
+    margin-bottom: 0.5rem;
+    
+    &--info { color: #4fc3f7; }
+    &--warning { color: #ffb74d; }
+    &--error { color: #f48fb1; }
+    &--success { color: #81c784; }
+  }
+  
+  &__prompt {
+    color: #ab47bc;
+    
+    &::before {
+      content: '> ';
+    }
+  }
+}
+
+// Tab component (IDE-style)
+.ai-tabs {
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: 2rem;
+  
+  &__nav {
+    display: flex;
+    gap: 0;
+    
+    .tab-button {
+      background: var(--tertiary-bg);
+      border: 1px solid var(--border-light);
+      border-bottom: none;
+      padding: 0.75rem 1rem;
+      color: var(--secondary-text);
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      
+      &:first-child {
+        border-top-left-radius: 4px;
+      }
+      
+      &:last-child {
+        border-top-right-radius: 4px;
+      }
+      
+      &.active {
+        background: var(--primary-bg);
+        color: var(--ai-primary);
+        border-color: var(--ai-primary);
+        border-bottom: 1px solid var(--primary-bg);
+        margin-bottom: -1px;
+      }
+      
+      &:hover:not(.active) {
+        background: var(--secondary-bg);
+        color: var(--primary-text);
+      }
+    }
+  }
+  
+  &__content {
+    .tab-pane {
+      display: none;
+      
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
+
+// Minimap component (like VS Code)
+.ai-minimap {
+  position: fixed;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 300px;
+  background: var(--secondary-bg);
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 10;
+  
+  &__viewport {
+    background: rgba(59, 130, 246, 0.3);
+    border: 1px solid var(--ai-primary);
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    top: 0;
+    left: 0;
+    transition: top var(--transition-fast);
+  }
+  
+  &__content {
+    padding: 2px;
+    height: 100%;
+    background: repeating-linear-gradient(
+      to bottom,
+      var(--tertiary-bg) 0px,
+      var(--tertiary-bg) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+  }
+}

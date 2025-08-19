@@ -1,0 +1,152 @@
+# Publication data for dynamic content generation
+# Format: YAML structure for easy Jekyll processing
+
+featured_publications:
+  - title: "SEAlign"
+    venue: "ICSE 2026"
+    venue_type: "Main Conference"
+    status: "Upcoming"
+    description: "A novel alignment framework aimed at bridging the gap between code generation models and real-world software engineering agent."
+    tags: ["AI4SE", "Alignment", "Code Generation"]
+    featured: true
+
+  - title: "CodeDPO"
+    venue: "ACL 2025"
+    venue_type: "Main Conference"
+    status: "Accepted"
+    description: "A preference optimization framework for code models that focuses on both correctness and efficiency without depending on external resources."
+    tags: ["LLMs", "Optimization", "Code Models"]
+    featured: true
+
+  - title: "FocusedDPO"
+    venue: "ACL 2025"
+    venue_type: "Finding"
+    status: "Accepted"
+    description: "Fine-grained optimization for code models with Error-Prone Points Identification."
+    tags: ["Optimization", "Error Detection", "LLMs"]
+    featured: false
+
+  - title: "CodeAgent"
+    venue: "ACL 2024"
+    venue_type: "Main Conference"
+    status: "Published"
+    description: "Integrating multiple programming assistance tools into large models for practical problem-solving."
+    tags: ["Agents", "Tool Integration", "Code Generation"]
+    awards: []
+    featured: true
+
+  - title: "HiRoPE"
+    venue: "ACL 2024"
+    venue_type: "Main Conference"
+    status: "Published"
+    description: "Introducing a plug-and-play length extension method for large code models."
+    tags: ["Length Extrapolation", "Transformers", "Code Models"]
+    featured: true
+
+  - title: "Self-Edit"
+    venue: "ACL 2023"
+    venue_type: "Main Conference"
+    status: "Published"
+    description: "Early exploration into the self-repair capability of large models in code generation."
+    tags: ["Self-Repair", "Code Generation", "LLMs"]
+    featured: false
+
+  - title: "Hierarchy Transformer"
+    venue: "ICPC 2023"
+    venue_type: "Conference"
+    status: "Published"
+    description: "A novel Transformer structure for modeling both sequence and structural information in source code."
+    tags: ["Transformers", "Code Representation", "Neural Networks"]
+    awards: ["ACM SIGSOFT Distinguished Paper Award"]
+    featured: true
+
+  - title: "Heterogeneous Code GNN"
+    venue: "ICPC 2022"
+    venue_type: "Conference"
+    status: "Published"
+    description: "Proposing a heterogeneous graph representation model for programs."
+    tags: ["Graph Neural Networks", "Code Representation", "Heterogeneous Graphs"]
+    featured: false
+
+all_publications:
+  # Preprints
+  - title: "StackTrans: From Large Language Model to Large Pushdown Automata Model"
+    authors: "Kechi Zhang, Ge Li, Jia Li, Huangzhao Zhang, Yihong Dong, Jia Li, Jingjing Xu, Zhi Jin"
+    venue: "arXiv preprint"
+    year: 2025
+    type: "preprint"
+    tags: ["Automata", "LLMs", "Formal Methods"]
+
+  - title: "Computational Thinking Reasoning in Large Language Models"
+    authors: "Kechi Zhang, Ge Li, Jia Li, Huangzhao Zhang, Jingjing Xu, Hao Zhu, Lecheng Wang, Jia Li, Yihong Dong, Jing Mai, Bin Gu, Zhi Jin"
+    venue: "arXiv preprint"
+    year: 2025
+    type: "preprint"
+    tags: ["Computational Thinking", "Reasoning", "LLMs"]
+
+  - title: "ToolCoder: Teach Code Generation Models to Use API Search Tool"
+    authors: "Kechi Zhang, Huangzhao Zhang, Ge Li, Jia Li, Zhuo Li, Zhi Jin"
+    venue: "arXiv preprint"
+    year: 2023
+    type: "preprint"
+    tags: ["Tool Learning", "API Search", "Code Generation"]
+
+  # Published Papers
+  - title: "SEAlign: Alignment Training for Software Engineering Agent"
+    authors: "Kechi Zhang, Huangzhao Zhang, Ge Li, Jinliang You, Jia Li, Yunfei Zhao, Zhi Jin"
+    venue: "ICSE 2026"
+    year: 2026
+    type: "conference"
+    tags: ["AI4SE", "Alignment", "Agents"]
+
+  - title: "Focused-DPO: Enhancing Code Generation Through Focused Preference Optimization on Error-Prone Points"
+    authors: "Kechi Zhang, Ge Li, Jia Li, Yihong Dong, Jia Li, Zhi Jin"
+    venue: "ACL 2025"
+    year: 2025
+    type: "conference"
+    tags: ["Optimization", "Error Detection", "Code Generation"]
+
+  - title: "CodeDPO: Aligning Code Models with Self Generated and Verified Source Code"
+    authors: "Kechi Zhang, Ge Li, Yihong Dong, Jingjing Xu, Jun Zhang, Jing Su, Yongfei Liu, Zhi Jin"
+    venue: "ACL 2025"
+    year: 2025
+    type: "conference"
+    tags: ["Alignment", "Code Models", "Verification"]
+
+  - title: "Transformer-based Code Model with Compressed Hierarchy Representation"
+    authors: "Kechi Zhang, Jia Li, Zhuo Li, Zhi Jin, Ge Li"
+    venue: "Empirical Software Engineering"
+    year: 2025
+    type: "journal"
+    tags: ["Transformers", "Code Representation", "Hierarchy"]
+
+research_areas:
+  - name: "AI4SE & LLMs for Code"
+    description: "Advancing software engineering through artificial intelligence and large language models"
+    tags: ["Code Generation", "Deep Learning"]
+    color: "primary"
+
+  - name: "Reinforcement Learning"
+    description: "Long reasoning code models with reinforcement learning approaches"
+    tags: ["RL", "Code Models"]
+    color: "accent"
+
+  - name: "Pre-training & Fine-tuning"
+    description: "Advanced techniques for training and aligning code LLMs"
+    tags: ["Pre-training", "Alignment"]
+    color: "primary"
+
+  - name: "Tool Enhancement"
+    description: "Agent technology and tool integration for code models"
+    tags: ["Agents", "Tools"]
+    color: "accent"
+
+  - name: "Length Extrapolation"
+    description: "Extending context length capabilities for code models"
+    tags: ["Context Length", "Extrapolation"]
+    color: "primary"
+
+  - name: "Project-level Generation"
+    description: "Comprehensive code generation at the project scale"
+    tags: ["Project-level", "Generation"]
+    color: "secondary"

@@ -1,0 +1,162 @@
+# Skills and achievements data
+# Used for progress bars and skill visualization
+
+technical_skills:
+  - name: "Large Language Models"
+    level: 95
+    category: "AI/ML"
+    description: "Pre-training, fine-tuning, and alignment of code LLMs"
+
+  - name: "Code Generation"
+    level: 90
+    category: "AI/ML"
+    description: "Deep learning approaches for automated code generation"
+
+  - name: "Neural Architecture Design"
+    level: 85
+    category: "AI/ML"
+    description: "Custom transformer architectures and neural networks"
+
+  - name: "Reinforcement Learning"
+    level: 80
+    category: "AI/ML"
+    description: "RL for code model optimization and reasoning"
+
+  - name: "Graph Neural Networks"
+    level: 75
+    category: "AI/ML"
+    description: "GNNs for code representation and analysis"
+
+  - name: "Python"
+    level: 95
+    category: "Programming"
+    description: "Primary research and development language"
+
+  - name: "PyTorch"
+    level: 90
+    category: "Frameworks"
+    description: "Deep learning framework for model development"
+
+  - name: "Transformers"
+    level: 85
+    category: "Frameworks"
+    description: "Hugging Face transformers for LLM development"
+
+  - name: "CUDA"
+    level: 75
+    category: "Performance"
+    description: "GPU programming for efficient model training"
+
+programming_languages:
+  - name: "Python"
+    icon: "🐍"
+    experience: "5+ years"
+    proficiency: 95
+
+  - name: "Java"
+    icon: "☕"
+    experience: "4+ years"
+    proficiency: 80
+
+  - name: "C++"
+    icon: "⚡"
+    experience: "3+ years"
+    proficiency: 75
+
+  - name: "JavaScript"
+    icon: "🌐"
+    experience: "2+ years"
+    proficiency: 70
+
+  - name: "Go"
+    icon: "🐹"
+    experience: "1+ years"
+    proficiency: 65
+
+research_tools:
+  - name: "PyTorch"
+    category: "Deep Learning"
+    description: "Primary framework for neural network development"
+    icon: "🔥"
+
+  - name: "Transformers"
+    category: "NLP"
+    description: "Hugging Face library for transformer models"
+    icon: "🤗"
+
+  - name: "Weights & Biases"
+    category: "MLOps"
+    description: "Experiment tracking and model monitoring"
+    icon: "📊"
+
+  - name: "Git/GitHub"
+    category: "Development"
+    description: "Version control and collaboration"
+    icon: "🐙"
+
+  - name: "Docker"
+    category: "DevOps"
+    description: "Containerization for reproducible research"
+    icon: "🐳"
+
+  - name: "SLURM"
+    category: "HPC"
+    description: "High-performance computing cluster management"
+    icon: "🖥️"
+
+achievements:
+  - title: "ACM SIGSOFT Distinguished Paper Award"
+    year: 2023
+    venue: "ICPC"
+    description: "Recognized for outstanding contribution to program comprehension research"
+    icon: "🏆"
+    color: "gold"
+
+  - title: "Outstanding Student Award"
+    year: "2022, 2023"
+    venue: "Peking University"
+    description: "Academic excellence and research contributions"
+    icon: "🎓"
+    color: "blue"
+
+  - title: "Yongying Foundation Scholarship"
+    year: 2023
+    venue: "Peking University"
+    description: "Merit-based scholarship for academic achievement"
+    icon: "💰"
+    color: "green"
+
+  - title: "Publications in Top Venues"
+    year: "2022-2025"
+    venue: "ACL, ICSE, ICPC"
+    description: "Multiple papers in premier AI and SE conferences"
+    icon: "📝"
+    color: "purple"
+
+  - title: "Research Collaboration"
+    year: "Ongoing"
+    venue: "Industry & Academia"
+    description: "Active collaboration with leading tech companies"
+    icon: "🤝"
+    color: "teal"
+
+research_impact:
+  - metric: "Publications"
+    value: "15+"
+    description: "Papers in top-tier venues"
+    icon: "📚"
+
+  - metric: "Citations"
+    value: "200+"
+    description: "Academic citations received"
+    icon: "📈"
+
+  - metric: "h-index"
+    value: "8"
+    description: "Research impact measure"
+    icon: "📊"
+
+  - metric: "Collaborations"
+    value: "10+"
+    description: "Active research partnerships"
+    icon: "🌐"

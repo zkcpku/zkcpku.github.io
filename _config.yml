@@ -2,15 +2,117 @@
 title: Kechi Zhang
 email: zhangkechi@pku.edu.cn
 description: > # this means to ignore newlines until "baseurl:"
-  I'm a PhD Student in the Peking University.
-  I am interested in AI4SE & LLMs for Code & Code Generation and Code Representation Based on Deep Learning. 
-# baseurl: "/" # the subpath of your site, e.g. /blog/
-url: "https://scholar.google.com/citations?user=6AuwtXwAAAAJ&hl=en" # the base hostname & protocol for your site
-github_username:  zkcpku
-permalink: /blog/:year/:month/:title.html
-gems:
-  - jekyll-sitemap
+  AI Coding Researcher | Ph.D. Candidate at Peking University
+  Passionate about leveraging large language models to enhance software engineering 
+  and transform the way we generate and represent code.
+
+# Social media and external links
+github_username: zkcpku
+scholar_url: "https://scholar.google.com/citations?user=6AuwtXwAAAAJ&hl=en"
+
+# Site URL configuration
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://zkcpku.github.io" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 theme: minima
+
+# Permalink structure
+permalink: /blog/:year/:month/:title.html
+
+# GitHub Pages compatible plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - .git/
+  - .gitignore
+
+# Include files
+include:
+  - _pages
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:name/
+
+# Default layouts for different content types
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Kechi Zhang"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+
+# Header pages (for navigation)
+header_pages:
+  - about.md
+  - publications.md
+
+# Syntax highlighting settings
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+# SEO settings
+google_analytics: # Add your GA tracking ID here if needed
+lang: en
+
+# Social media
+twitter:
+  username: # Add Twitter username if available
+  card: summary_large_image
+
+# Author information
+author:
+  name: Kechi Zhang
+  email: zhangkechi@pku.edu.cn
+
+# AI Coding Theme specific settings
+ai_theme:
+  enable_dark_mode: true
+  enable_animations: true
+  enable_search: true
+  typing_speed: 80
+  neural_animations: true
+
+# Research focus areas
+research_focus:
+  - "AI4SE & LLMs for Code"
+  - "Code Generation and Representation"
+  - "Neural Code Intelligence"
+  - "Reinforcement Learning for Code Models"
+
+# Contact information
+contact:
+  email: zhangkechi@pku.edu.cn
+  address: "Room No. 1726, No. 1 Science Building, Peking University, Beijing 100871"
+  scholar: "https://scholar.google.com/citations?user=6AuwtXwAAAAJ&hl=en"

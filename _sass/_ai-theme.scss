@@ -1,0 +1,143 @@
+// AI Coding Theme Variables
+// Dark/Light theme system with developer-friendly colors
+
+// Color Palette - AI Coding Theme
+:root {
+  // Light theme (default)
+  --primary-bg: #ffffff;
+  --secondary-bg: #f8fafc;
+  --tertiary-bg: #f1f5f9;
+  --primary-text: #1e293b;
+  --secondary-text: #475569;
+  --accent-text: #64748b;
+  
+  // AI/Tech accent colors
+  --ai-primary: #3b82f6;
+  --ai-secondary: #8b5cf6;
+  --ai-accent: #06b6d4;
+  --neural-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  
+  // Code/Terminal colors (inspired by VS Code Dark+)
+  --code-bg: #1e1e1e;
+  --code-text: #d4d4d4;
+  --code-keyword: #569cd6;
+  --code-string: #ce9178;
+  --code-comment: #6a9955;
+  --code-function: #dcdcaa;
+  
+  // Status colors
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: --ai-primary;
+  
+  // Interactive states
+  --hover-overlay: rgba(59, 130, 246, 0.1);
+  --active-overlay: rgba(59, 130, 246, 0.2);
+  --focus-ring: 0 0 0 3px rgba(59, 130, 246, 0.3);
+  
+  // Borders and dividers
+  --border-light: #e2e8f0;
+  --border-medium: #cbd5e1;
+  --border-dark: #94a3b8;
+  
+  // Shadows
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-ai: 0 8px 25px rgba(59, 130, 246, 0.15);
+  
+  // Typography
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Inter', var(--font-sans);
+  
+  // Transitions
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+}
+
+// Dark theme
+[data-theme="dark"] {
+  --primary-bg: #0f172a;
+  --secondary-bg: #1e293b;
+  --tertiary-bg: #334155;
+  --primary-text: #f8fafc;
+  --secondary-text: #cbd5e1;
+  --accent-text: #94a3b8;
+  
+  // Enhanced contrast for dark mode
+  --code-bg: #111827;
+  --border-light: #374151;
+  --border-medium: #4b5563;
+  --border-dark: #6b7280;
+  
+  // Adjusted shadows for dark mode
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --shadow-ai: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+// Typography Scale
+$font-sizes: (
+  'xs': 0.75rem,    // 12px
+  'sm': 0.875rem,   // 14px  
+  'base': 1rem,     // 16px
+  'lg': 1.125rem,   // 18px
+  'xl': 1.25rem,    // 20px
+  '2xl': 1.5rem,    // 24px
+  '3xl': 1.875rem,  // 30px
+  '4xl': 2.25rem,   // 36px
+  '5xl': 3rem,      // 48px
+  '6xl': 3.75rem    // 60px
+);
+
+// Spacing Scale (based on 8px grid)
+$spacing: (
+  '0': 0,
+  '1': 0.25rem,   // 4px
+  '2': 0.5rem,    // 8px
+  '3': 0.75rem,   // 12px
+  '4': 1rem,      // 16px
+  '5': 1.25rem,   // 20px
+  '6': 1.5rem,    // 24px
+  '8': 2rem,      // 32px
+  '10': 2.5rem,   // 40px
+  '12': 3rem,     // 48px
+  '16': 4rem,     // 64px
+  '20': 5rem,     // 80px
+  '24': 6rem      // 96px
+);
+
+// Breakpoints for responsive design
+$breakpoints: (
+  'sm': 640px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px,
+  '2xl': 1536px
+);
+
+// Z-index scale
+$z-index: (
+  'dropdown': 1000,
+  'sticky': 1020,
+  'fixed': 1030,
+  'modal-backdrop': 1040,
+  'modal': 1050,
+  'popover': 1060,
+  'tooltip': 1070
+);
+
+// Animation curves
+$easing: (
+  'linear': linear,
+  'ease': ease,
+  'ease-in': ease-in,
+  'ease-out': ease-out,
+  'ease-in-out': ease-in-out,
+  'bounce': cubic-bezier(0.68, -0.55, 0.265, 1.55),
+  'smooth': cubic-bezier(0.4, 0, 0.2, 1)
+);
