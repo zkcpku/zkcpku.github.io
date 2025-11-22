@@ -17,7 +17,7 @@ permalink: /publications/
 
 ## Selected Publications
 
-- **[NeurIPS 2025]** ***Kechi Zhang***, Ge Li, Jia Li, Huangzhao Zhang, Yihong Dong, Jia Li, Jingjing Xu, and Zhi Jin, StackTrans: From Large Language Model to Large Pushdown Automata Model, arXiv preprint
+- **[NeurIPS 2025]** ***Kechi Zhang***, Ge Li, Jia Li, Huangzhao Zhang, Yihong Dong, Jia Li, Jingjing Xu, and Zhi Jin, Improving Formal Reasoning of Transformer with State Stack (also known as: StackTrans: From Large Language Model to Large Pushdown Automata Model)
 
 - **[ICSE 2026]** ***Kechi Zhang***, Huangzhao Zhang, Ge Li, Jinliang You, Jia Li, Yunfei Zhao, Zhi Jin, SEAlign: Alignment Training for Software Engineering Agent
 
