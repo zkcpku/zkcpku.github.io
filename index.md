@@ -52,30 +52,33 @@ Homepage: [Google Scholar](https://scholar.google.com/citations?user=6AuwtXwAAAA
 
 ## 📝 **Selected Publications**
 
-- **SEAlign** | *ICSE 2026*  
+- **SEAlign** | *ICSE 2026*  (CCF-A)
   A novel alignment framework aimed at bridging the gap between code generation models and real-world software engineering agent.
 
-- **CodeDPO** | *ACL 2025 Main Conference*  
+- **StackTrans** | *NeurIPS 2025*  (CCF-A)
+  StackTrans is an improved model based on the Transformer architecture, which addresses the performance bottleneck of traditional Transformers in processing context-free grammars (such as regular expressions and deterministic context-free grammars) by introducing a hidden state stack mechanism.
+
+- **CodeDPO** | *ACL 2025 Main Conference*  (CCF-A)
   A preference optimization framework for code models that focuses on both correctness and efficiency without depending on external resources.
 
-- **FocusedDPO** | *ACL 2025 Finding*  
+- **FocusedDPO** | *ACL 2025 Finding*  (CCF-A)
   Fine-graind optimization for code models with Error-Prone Points Identification.
 
-- **CodeAgent** | *ACL 2024 Main Conference*  
+- **CodeAgent** | *ACL 2024 Main Conference*  (CCF-A)
   Integrating multiple programming assistance tools into large models for practical problem-solving.
   
-- **HiRoPE** | *ACL 2024 Main Conference*  
+- **HiRoPE** | *ACL 2024 Main Conference*  (CCF-A)
   Introducing a plug-and-play length extension method for large code models.
   
-- **Self-Edit** | *ACL 2023 Main Conference*  
+- **Self-Edit** | *ACL 2023 Main Conference*  (CCF-A)
   Early exploration into the self-repair capability of large models in code generation.
   
-- **Hierarchy Transformer** | *ICPC 2023* & *EMSE 2024* | **🏆ACM SIGSOFT Distinguished Paper Award**  
+- **Hierarchy Transformer** | *ICPC 2023* & *EMSE 2024* | **🏆ACM SIGSOFT Distinguished Paper Award**  (CCF-B)
   A novel Transformer structure for modeling both sequence and structural information in source code.
   
   We further pretrain the 125M code model with this new architecture.
   
-- **Heterogeneous Code GNN** | *ICPC 2022*  
+- **Heterogeneous Code GNN** | *ICPC 2022*  (CCF-B)
   Proposing a heterogeneous graph representation model for programs.
 
 - **ToolCoder**  
