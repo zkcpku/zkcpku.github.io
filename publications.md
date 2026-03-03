@@ -17,9 +17,9 @@ permalink: /publications/
 
 ## Selected Publications
 
-- **[NeurIPS 2025]** ***Kechi Zhang***, Ge Li, Jia Li, Huangzhao Zhang, Yihong Dong, Jia Li, Jingjing Xu, and Zhi Jin, Improving Formal Reasoning of Transformer with State Stack (also known as: StackTrans: From Large Language Model to Large Pushdown Automata Model)
+- **[ICSE 2026]** ***Kechi Zhang***, Huangzhao Zhang, Ge Li, Jinliang You, Jia Li, Yunfei Zhao, Zhi Jin, SEAlign: Alignment Training for Software Engineering Agent ***(🏆ACM SIGSOFT Distinguished Paper Award🏆)***
 
-- **[ICSE 2026]** ***Kechi Zhang***, Huangzhao Zhang, Ge Li, Jinliang You, Jia Li, Yunfei Zhao, Zhi Jin, SEAlign: Alignment Training for Software Engineering Agent
+- **[NeurIPS 2025]** ***Kechi Zhang***, Ge Li, Jia Li, Huangzhao Zhang, Yihong Dong, Jia Li, Jingjing Xu, and Zhi Jin, Recursive Transformer: Boosting Reasoning Ability with State Stack (also known as: StackTrans: From Large Language Model to Large Pushdown Automata Model)
 
 - **[ACL 2025]** ***Kechi Zhang***, Ge Li, Jia Li, Yihong Dong, Jia Li, Zhi Jin, Focused-DPO: Enhancing Code Generation Through Focused Preference Optimization on Error-Prone Points
 
