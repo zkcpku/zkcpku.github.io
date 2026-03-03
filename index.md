@@ -50,9 +50,9 @@ Homepage: [Google Scholar](https://scholar.google.com/citations?user=6AuwtXwAAAA
 
 ---
 
-## 📝 **Selected Publications**
+## 📝 **Selected Publications (First Author)**
 
-- **SEAlign** | *ICSE 2026*  (CCF-A)
+- **SEAlign** | *ICSE 2026*  (CCF-A) | **🏆ACM SIGSOFT Distinguished Paper Award**
   A novel alignment framework aimed at bridging the gap between code generation models and real-world software engineering agent.
 
 - **StackTrans** | *NeurIPS 2025*  (CCF-A)
