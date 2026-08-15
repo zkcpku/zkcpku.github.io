@@ -8,14 +8,18 @@ layout: default
 
 # Hi there! 👋
 
+I'm **Kechi Zhang (张克驰)**. 
 
-I'm **Kechi Zhang (张克驰)**, currently pursuing my Ph.D. at Peking University, with an expected graduation in June 2026. 
+I am currently with the Tencent Hunyuan LLM Team, where I study agents. 
+My work explores challenging problems in agent–model co-design.
 
-My research is at the fascinating intersection of **AI4SE**, **LLMs for Code**, and **Code Generation and Representation** through deep learning techniques. 
+I received my Ph.D. in Computer Science from Peking University in June 2026. My research focuses on AI for Software Engineering (AI4SE), LLMs for Code, and Code Agent Systems.
 
-I am passionate about leveraging large language models to enhance software engineering and the way we generate and represent code.
+During my Ph.D., **two of my first-authored papers received the ACM SIGSOFT Distinguished Paper Award**. These were, without a doubt, among the happiest and most memorable moments of my Ph.D. journey. : )
 
-**I am now dedicated to building a powerful code agent capable of end-to-end generation of production-ready code, joining outstanding counterparts like** *Claude Code* **in striving to transform software engineering development workflows!**
+I was honored to be named an **Outstanding Graduate of both Beijing and Peking University**. My doctoral dissertation, *Research on Key Technologies of Code Agent Systems Based on Large Language Models*, received the **2026 Peking University Outstanding Doctoral Dissertation Award**—the university’s highest distinction for a doctoral dissertation. Only four dissertations from the School of Computer Science received this honor that year.
+
+I am passionate about building powerful and reliable agents that can tackle complex, real-world tasks and ultimately transform how software is developed. I am always happy to connect with researchers and builders working on related topics!
 
 Email: zhangkechi@pku.edu.cn
 
