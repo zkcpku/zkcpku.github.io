@@ -44,7 +44,7 @@ Homepage: [Google Scholar](https://scholar.google.com/citations?user=6AuwtXwAAAA
 
 - **Ph.D. in Computer Software and Theory**  
   School of Computer Science, Peking University, Beijing, China  
-  *Sept. 2021 - June 2026 (expected)*  
+  *Sept. 2021 - June 2026*  
   **Tutor:** Prof. Zhi Jin, Prof. Ge Li
 
 - **B.S. in Computer Science and Technology**  
